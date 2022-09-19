@@ -6,6 +6,7 @@ import Header from "../containers/Header";
 import ThemeContext from "../context/themeContext";
 import About from '../containers/About'
 import Projects from '../containers/Projects'
+import Contact from '../containers/Contact'
 
 
 export default function Home() {
@@ -32,6 +33,7 @@ setFs(true);
       <Header></Header>
       <About></About>
       <Projects></Projects>
+      <Contact></Contact>
       </>
        : <></>}
     </div>
