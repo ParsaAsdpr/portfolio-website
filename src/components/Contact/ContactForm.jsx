@@ -94,7 +94,7 @@ const ContactForm = () => {
             className={`border-b border-stone-500 mt-7 py-3 w-full max-w-full min-w-full max-h-[140px] min-h-[140px] duration-700 outline-none ${
               precentage > 0.65
                 ? "translate-x-0 opacity-1"
-                : "translate-x-full opacity-0"
+                : "-translate-x-full opacity-0"
             }`}
             placeholder="Your Message"
           ></textarea>

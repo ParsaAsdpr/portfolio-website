@@ -22,12 +22,12 @@ const Input = (props) => {
         } w-full py-3 px-2 outline-none duration-700 ${
           props.perc > props.expected
             ? "translate-x-0 opacity-1"
-            : "translate-x-full opacity-0"
+            : "-translate-x-full opacity-0"
         }`}
         placeholder={props.placeholder}
       />
       {isError ? (
-        <p className="text-xs p-0 leading-3 text-red-400">
+        <p className="text-xs pt-2 leading-3 text-red-400">
           {props.error}
         </p>
       ) : null}
