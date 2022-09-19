@@ -23,7 +23,7 @@ const Footer = () => {
   ]);
 
   return (
-    <div className="w-full py-12 mt-28 bg-neutral-800">
+    <div className="w-full py-14 mt-28 bg-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row gap-y-7 items-center  justify-between">
         <p className="text-stone-100 text-xs sm:text-sm">
           © 2022 Parsa Asadpour. All Rights Reserved.
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="flex flex-row gap-5 sm:gap-8 lg:gap-8 xl:gap-10">
           {socialMedia.map((social, index) => (
             <a
-              target="blank"
+              target="_blank"
               className="text-xl text-gray-50 hover:scale-125 transition"
               key={index}
               href={social.href}

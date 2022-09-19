@@ -44,7 +44,6 @@ const Experience = () => {
           position={exp[0].position}
           desc={exp[0].desc}
           perc={0.3}
-          key={exp[0]}
         />
         <ExpCard
           color={exp[1].color}
@@ -53,7 +52,6 @@ const Experience = () => {
           position={exp[1].position}
           desc={exp[1].desc}
           perc={0.39}
-          key={exp[1]}
         />
 
         {/* ))} */}

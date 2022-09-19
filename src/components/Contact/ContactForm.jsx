@@ -45,7 +45,7 @@ const ContactForm = () => {
       renderLayer={(precentage) => (
         <form onSubmit={formik.handleSubmit}>
           <h2
-            className={`font-bold italic text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-stone-800 pb-8 sm:pb-14 parallax duration-700 ${
+            className={`mt-14 font-bold italic text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-stone-800 pb-8 sm:pb-14 parallax duration-700 ${
               precentage > 0.25 ? "show" : "hide"
             }`}
           >

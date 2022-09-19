@@ -7,6 +7,7 @@ import ThemeContext from "../context/themeContext";
 import About from '../containers/About'
 import Projects from '../containers/Projects'
 import Contact from '../containers/Contact'
+import Footer from '../containers/Footer'
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ setFs(true);
       <About></About>
       <Projects></Projects>
       <Contact></Contact>
+      <Footer></Footer>
       </>
        : <></>}
     </div>
