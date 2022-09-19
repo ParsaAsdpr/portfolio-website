@@ -4,6 +4,7 @@ import WelcomeContainer from "../containers/WelcomeContainer";
 import {useState, useEffect} from "react";
 import Header from "../containers/Header";
 import ThemeContext from "../context/themeContext";
+import About from '../containers/About'
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ setFs(true);
       <WelcomeContainer />
       {fs ? <>
       <Header></Header>
+      <About></About>
       </>
        : <></>}
     </div>
