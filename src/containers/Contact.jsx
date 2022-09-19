@@ -6,7 +6,7 @@ import { Parallax } from "react-parallax";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <SectionTitle title="Contact"></SectionTitle>
       <div className="flex flex-col sm:flex-row justify-between max-w-7xl mx-auto mt-16 sm:mt-20 md::mt-24">
 
