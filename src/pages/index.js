@@ -5,6 +5,7 @@ import {useState, useEffect} from "react";
 import Header from "../containers/Header";
 import ThemeContext from "../context/themeContext";
 import About from '../containers/About'
+import Projects from '../containers/Projects'
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ setFs(true);
       {fs ? <>
       <Header></Header>
       <About></About>
+      <Projects></Projects>
       </>
        : <></>}
     </div>
