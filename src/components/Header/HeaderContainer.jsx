@@ -40,7 +40,7 @@ const HeaderContainer = () => {
   return (
     <ThemeContext.Consumer>
       {(themeContext) => (
-        <div
+        <header
           className={`w-full h-screen bg-${themeContext} header-container outline-none border-0 relative flex justify-center items-center overflow-hidden`}
         >
           <div className="border-container relative">
@@ -112,7 +112,7 @@ const HeaderContainer = () => {
               className="rounded-full border-dashed border-8 border-black opacity-5 absolute p-[600px] -top-[500px] -right-[800px] dashed-circle"
             ></motion.div>
           </div>
-        </div>
+        </header>
       )}
     </ThemeContext.Consumer>
   );

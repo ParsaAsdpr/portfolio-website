@@ -23,7 +23,7 @@ const Footer = () => {
   ]);
 
   return (
-    <div className="w-full py-14 mt-28 bg-neutral-800">
+    <footer className="w-full py-14 mt-28 bg-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row gap-y-7 items-center  justify-between">
         <p className="text-stone-100 text-xs sm:text-sm">
           © 2022 Parsa Asadpour. All Rights Reserved.
@@ -42,7 +42,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

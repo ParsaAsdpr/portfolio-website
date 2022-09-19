@@ -4,10 +4,10 @@ import ProjectSlider from '../components/Projects/ProjectSlider';
 
 const Projects = () => {
     return (
-        <div id='projects' className='pt-16'>
+        <section id='projects' className='pt-16'>
             <SectionTitle title="Projects"></SectionTitle>
             <ProjectSlider></ProjectSlider>
-        </div>
+        </section>
     );
 };
 
