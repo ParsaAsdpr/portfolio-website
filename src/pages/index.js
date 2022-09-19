@@ -9,10 +9,10 @@ import Projects from '../containers/Projects'
 import Contact from '../containers/Contact'
 import Footer from '../containers/Footer'
 
+const theme = Math.floor(Math.random() * 5) + 1;
 
 export default function Home() {
   const [fs, setFs] = useState(false);
-  const theme = Math.floor(Math.random() * 5) + 1;
 
 useEffect(() => {
 setTimeout(() => {

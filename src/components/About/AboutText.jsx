@@ -13,10 +13,10 @@ const AboutText = () => {
                 precentage > 0.35 ? "show" : "hide"
               }`}
             >
-              "I'm a frontend developer and UI/UX designer with 3 years of
+              &quot;I&lsquo;m a frontend developer and UI/UX designer with 3 years of
               experience currently studying computer engineering in Islamic Azad
               University. I love learning and using the latest web technologies
-              and improving my skills."
+              and improving my skills.&quot;
             </p>
           )}
         ></Parallax>

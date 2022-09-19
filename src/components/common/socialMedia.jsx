@@ -3,7 +3,7 @@ import React from 'react';
 const SocialMedia = props => {
 
     return (
-        <a title={props.title} target="_blank" className={`text-2xl md:text-3xl py-1 bg-${props.theme} cursor-pointer hover:scale-110 transition social-media`} href={props.url} >
+        <a title={props.title} target="_blank" rel="noreferrer" className={`text-2xl md:text-3xl py-1 bg-${props.theme} cursor-pointer hover:scale-110 transition social-media`} href={props.url} >
             {props.children}
         </a>
     );

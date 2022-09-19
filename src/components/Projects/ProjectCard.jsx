@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
   return (
     <div
       className={`flex flex-col project-card w-[400px] sm:w-[300px] md:w-[340px] lg:w-[330px] xl:w-[400px] duration-700 ${
-        props.perc > 0.2
+        props.perc > 0.8
           ? "opacity-1 translate-x-0"
           : "opacity-0 translate-x-full"
       }`}

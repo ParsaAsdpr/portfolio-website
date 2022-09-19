@@ -49,7 +49,7 @@ const ContactForm = () => {
               precentage > 0.25 ? "show" : "hide"
             }`}
           >
-            Let's Work Together
+            Let&lsquo;s Work Together
           </h2>
 
           <div className="flex flex-col sm:flex-row justify-between gap-10">
@@ -92,7 +92,7 @@ const ContactForm = () => {
 
           <textarea
             className={`border-b border-stone-500 mt-7 py-3 w-full max-w-full min-w-full max-h-[140px] min-h-[140px] duration-700 outline-none ${
-              precentage > 0.65
+              precentage > 0.50
                 ? "translate-x-0 opacity-1"
                 : "-translate-x-full opacity-0"
             }`}
