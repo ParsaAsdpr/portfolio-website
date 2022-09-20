@@ -28,7 +28,7 @@ const Experience = () => {
         renderLayer={(precentage) => (
           <h1
             className={`text-2xl sm:text-5xl lg:text-6xl text-center parallax font-bold text-stone-800 duration-700 ${
-              precentage > 0.1 ? "show" : "hide"
+              precentage > 0.25 ? "show" : "hide"
             }`}
           >
             My Experience
@@ -43,7 +43,7 @@ const Experience = () => {
           date={exp[0].date}
           position={exp[0].position}
           desc={exp[0].desc}
-          perc={0.3}
+          perc={0.4}
         />
         <ExpCard
           color={exp[1].color}
@@ -51,7 +51,7 @@ const Experience = () => {
           date={exp[1].date}
           position={exp[1].position}
           desc={exp[1].desc}
-          perc={0.39}
+          perc={0.49}
         />
 
         {/* ))} */}

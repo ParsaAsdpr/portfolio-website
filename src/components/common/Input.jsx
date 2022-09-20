@@ -27,7 +27,13 @@ const Input = (props) => {
         placeholder={props.placeholder}
       />
       {isError ? (
-        <p className="text-xs pt-2 leading-3 text-red-400">
+        <p
+          className={`text-xs pt-2 leading-3 text-red-400 duration-700 ${
+            props.perc > props.expected
+              ? "translate-x-0 opacity-1"
+              : "-translate-x-full opacity-0"
+          }`}
+        >
           {props.error}
         </p>
       ) : null}

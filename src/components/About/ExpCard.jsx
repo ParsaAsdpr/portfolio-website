@@ -45,7 +45,7 @@ const ExpCard = (props) => {
                 {props.position}
               </h4>
               <p
-                className={`mt-4 text-xs md:text-base lg:text-lg pr-4 parallax desc duration-700 delay-700 ${
+                className={`mt-4 text-stone-600 text-xs md:text-base lg:text-lg pr-4 parallax desc duration-700 delay-700 ${
                   precentage > props.perc ? "show" : "hide"
                 }`}
               >

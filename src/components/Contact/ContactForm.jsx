@@ -92,7 +92,7 @@ const ContactForm = () => {
 
           <textarea
             className={`border-b border-stone-500 mt-7 py-3 w-full max-w-full min-w-full max-h-[140px] min-h-[140px] duration-700 outline-none ${
-              precentage > 0.50
+              precentage > 0.60
                 ? "translate-x-0 opacity-1"
                 : "-translate-x-full opacity-0"
             }`}
@@ -102,7 +102,7 @@ const ContactForm = () => {
           <button
           type="submit"
             className={`mt-10 py-4 border font-bold border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition w-full duration-700 ${
-              precentage > 0.75
+              precentage > 0.70
                 ? "translate-y-0 opacity-1"
                 : "translate-y-full opacity-0"
             }` 
