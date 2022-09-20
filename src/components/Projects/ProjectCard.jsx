@@ -21,7 +21,7 @@ const ProjectCard = (props) => {
     >
       <div className="w-full project-container h-[250px] sm:h-[200px] md:h-[210px] lg:h-[200px] xl:h-[240px] rounded-md border border-black overflow-hidden cursor-pointer project-image">
         <div className="absolute project-mask w-full h-full duration-1000 hover:backdrop-blur-sm bottom-0 right-0 z-10">
-          <div className="flex flex-row justify-center gap-16 items-center w-full h-full duration-1000 opacity-0">
+          <div className="flex flex-row justify-center gap-16 items-center w-full h-full delay-300 duration-1000 opacity-0">
             {button.map((btn, index) => (
               <a
                 className={`p-3 text-2xl ${props.isDark ? 'text-white border-white hover:bg-white hover:text-stone-800' : 'text-stone-800 border-stone-800 hover:bg-stone-800 hover:text-white'} cursor-pointer duration-300 rounded-full border-2`}
