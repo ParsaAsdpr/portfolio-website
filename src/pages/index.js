@@ -28,6 +28,7 @@ setFs(true);
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="Web Developer, Portfolio, Parsa Asadpour, Parsa, Asadpour, Asadpoor, Next.js, Developer, React, React.js, UI, UX"></meta>
         <meta name="author" content="Parsa"></meta>
+        <meta name="theme-color" content={theme} />
       </Head>
 
     <div>
