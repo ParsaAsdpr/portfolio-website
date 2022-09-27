@@ -9,13 +9,10 @@ import Typewriter from "typewriter-effect";
 import { stringToArray } from "../../utils/helper/stringToArray.helpers";
 import ScrollButton from "./ResumeButton";
 
+import navlinks from '../../constants/navlinks.json'
+
 const HeaderContainer = () => {
-  const [navs] = React.useState([
-    { text: "About", url: "#about" },
-    { text: "Projects", url: "#projects" },
-    { text: "Contact", url: "#contact" },
-  ]);
-  const [socialMedia] = React.useState([
+  const socialMedia = [
     {
       name: "Telegram",
       element: <BsTelegram />,
@@ -32,7 +29,7 @@ const HeaderContainer = () => {
       href: "https://github.com/ParsaAsdpr",
     },
     { name: "Phone", element: <FaPhoneSquareAlt />, href: "tel:+989939604178" },
-  ]);
+  ];
 
 
   const brand = stringToArray("Parsa Asadpour");
@@ -45,7 +42,7 @@ const HeaderContainer = () => {
         >
           <div className="border-container relative">
             <nav className="w-3/4 sm:w-3/4 md:w-2/3 lg:w-1/2 left-1/2 -translate-x-1/2 z-10 absolute -top-3 sm:-top-4 md:-top-5 text-[9pt] sm:text-sm md:text-xl flex flex-row justify-around">
-              {navs.map((nav, index) => (
+              {navlinks.map((nav, index) => (
                 <Navlink
                   text={nav.text}
                   url={nav.url}

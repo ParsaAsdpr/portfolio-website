@@ -1,0 +1,16 @@
+[
+    {
+      "color": 1,
+      "company": "Sepehr Academy",
+      "date": "April 2020 - February 2021",
+      "position": "Frontend Developer",
+      "desc": "I was frontend developer in developing an ecommerce web app for Sepehr academy. i managed a team of 3 people to build the frontend for the webapp. we used React.js to build the frontend."
+    },
+    {
+      "color": 3,
+      "company": "DadeKav",
+      "date": "October 2021 - May 2022",
+      "position": "Frontend Developer",
+      "desc": "Worked as frontend developer to develop a nationwide agricultural management system and utilized React and Next.js"
+    }
+  ]

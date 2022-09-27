@@ -3,7 +3,7 @@ import { BsTelegram, BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 
 const Footer = () => {
-  const [socialMedia] = React.useState([
+  const socialMedia = [
     {
       name: "Telegram",
       element: <BsTelegram />,
@@ -20,7 +20,7 @@ const Footer = () => {
       href: "https://github.com/ParsaAsdpr",
     },
     { name: "Phone", element: <FaPhoneSquareAlt />, href: "tel:+989939604178" },
-  ]);
+  ];
 
   return (
     <footer className="w-full py-14 mt-28 bg-neutral-800">

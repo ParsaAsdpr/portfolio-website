@@ -1,12 +1,12 @@
 import React from "react";
 import { FiGithub, FiLink } from "react-icons/fi";
-import Image from "next/image";
+
 
 const ProjectCard = (props) => {
-  const [button] = React.useState([
+  const button = [
     { title: "Github", link: props.github, icon: <FiGithub /> },
     { title: "Redirect", link: props.link, icon: <FiLink /> },
-  ]);
+  ];
   let del;
 
   if (props.duration > 0) del = props.duration / 10 + 0.1;
@@ -34,11 +34,12 @@ const ProjectCard = (props) => {
             ))}
           </div>
         </div>
-        <Image
+        <img
           src={props.img}
           alt="Project preview"
           draggable={false}
-          className="w-full project-img duration-1000"
+          className="project-img duration-1000"
+          
         />
       </div>
       <div className="flex flex-row pt-5 sm:pt-8 md:pt-10 relative px-1 sm:px-2 md:px-3 items-center">

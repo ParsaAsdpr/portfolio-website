@@ -2,21 +2,9 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import AboutDetails from "./AboutDetails";
 
+import about from '../../constants/about.json'
+
 const AboutText = () => {
-  const [about] = React.useState([
-    {
-      title: "UI/UX Design Journey",
-      desc: "I was taught UI/UX desgining by Hamed Nazari. This was my first step to start Web development",
-    },
-    {
-      title: "Web Development",
-      desc: "I learnt web development basics like html, javascript, css and .net framework at Bahr academy by Professor Mohammad Bahrololoumi",
-    },
-    {
-      title: "React.js and Next.js",
-      desc: "I was introduced to React.js library by my friends. I learnt React.js watching Mosh tutorials and i've been working with it for over a year",
-    },
-  ]);
   return (
     <div className="flex flex-col gap-y-20 md:py-10">
       <Parallax

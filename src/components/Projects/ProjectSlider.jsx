@@ -2,40 +2,15 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Academy from "../../../public/images/academy.png";
-import portfolio from '../../../public/images/portfolio.png'
-import nike from '../../../public/images/Nike Redesign.png'
+// import Academy from "../../../public/images/academy.png";
+// import portfolio from '../../../public/images/portfolio.png'
+// import nike from '../../../public/images/Nike Redesign.png'
 import { BsArrowLeft } from "react-icons/bs";
 import { Parallax } from "react-parallax";
 
-const ProjectSlider = () => {
-  const [projects] = React.useState([
-    {
-      title: "Nike Redesign",
-      img: nike,
-      desc: "I redesigned Nike website with Adobe XD then i implemented it with Next.js.",
-      github: "#",
-      link: "#",
-      isDark: true
-    },
-    {
-      title: "Bahr Academy",
-      img: Academy,
-      desc: "designed an online academy website with Adobe XD and built the frontend with my team using React.js.",
-      github: "#",
-      link: "#",
-      isDark: false
-    },
-    {
-      title: "Portfolio Website",
-      img: portfolio,
-      desc: "designed my own personal website with figma first then i implemented it with Next.js",
-      github: "#",
-      link: "#",
-      isDark: false
-    },
-  ]);
+import projects from '../../constants/projects.json'
 
+const ProjectSlider = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
