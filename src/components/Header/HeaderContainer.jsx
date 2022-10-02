@@ -84,7 +84,7 @@ const HeaderContainer = () => {
                       .pauseFor(600)
                       .changeDelay(90)
                       .typeString(
-                        "Young Web Developer and <br /> UI/UX Designer from Iran"
+                        "Junior Web Developer and <br /> UI/UX Designer from Iran"
                       )
                       .start();
                   }}
