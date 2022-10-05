@@ -4,13 +4,13 @@
       "company": "Sepehr Academy",
       "date": "April 2020 - February 2021",
       "position": "Frontend Developer",
-      "desc": "I was frontend developer in developing an ecommerce web app for Sepehr academy. i managed a team of 3 people to build the frontend for the webapp. we used React.js to build the frontend."
+      "desc": "Redesigned and developed online academy website for Sepehr Academy and its admin panel with a small team using React.js, Axios, TailwindCSS and i designed user interface with Adobe XD myself. this website contained courses and course pages, login and register page, admin panel, articles, etc... also features like applying and cancelling courses by the students, ability to like articles and posting comments on courses, etc"
     },
     {
       "color": 3,
       "company": "DadeKav",
       "date": "October 2021 - May 2022",
       "position": "Frontend Developer",
-      "desc": "Worked as frontend developer to develop a nationwide agricultural management system and utilized React and Next.js"
+      "desc": "Dadekav was a start-up that I was invited by one of my friends. Our project was about collecting Iranian and foreign APIs for the convenience of Iranian developers"
     }
   ]

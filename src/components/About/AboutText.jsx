@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import AboutDetails from "./AboutDetails";
 
-import about from '../../constants/about.json'
+import about from "../../constants/about.json";
 
 const AboutText = () => {
   return (
@@ -17,10 +17,12 @@ const AboutText = () => {
                   precentage > 0.45 ? "show" : "hide"
                 }`}
               >
-                &quot;I&lsquo;m a frontend developer and UI/UX designer with 3
-                years of experience currently studying computer engineering in
-                Islamic Azad University. I love learning and using the latest
-                web technologies and improving my skills.&quot;
+                &quot;I&lsquo;m Frontend developer and UI/UX Designer with 3 years of experience working
+                with React.js & Next.js, currently studying computer engeneering
+                at Islamic Azad University and interested in developing
+                websites. i love learning and using the latest web technologies
+                and improving my skills. I am usually an active person and i do
+                my work creatively&quot;
               </p>
             </div>
             <div

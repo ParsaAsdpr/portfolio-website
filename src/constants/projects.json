@@ -1,25 +1,41 @@
 [
-    {
-      "title": "Nike Redesign",
-      "img": "/images/Nike Redesign.png",
-      "desc": "I redesigned Nike website with Adobe XD then i implemented it with Next.js.",
-      "github": "#",
-      "link": "#",
-      "isDark": true
-    },
-    {
-      "title": "Bahr Academy",
-      "img": "/images/portfolio.png",
-      "desc": "designed an online academy website with Adobe XD and built the frontend with my team using React.js.",
-      "github": "#",
-      "link": "#",
-      "isDark": false
-    },
-    {
+  {
+    "title": "React Chat App",
+    "img": "/images/chat.png",
+    "desc": "very simple react chat app with socket.io and express.js",
+    "github": "https://github.com/ParsaAsdpr/React-chat-app",
+    "link": "#",
+    "isDark": true
+  },
+  {
+    "title": "React Crypto App",
+    "img": "/images/crypto.png",
+    "desc": "crypto currency app with react, tailwind and axios",
+    "github": "https://github.com/ParsaAsdpr/react-crypto",
+    "link": "https://react-crypto-blond.vercel.app",
+    "isDark": true
+  },
+  {
+    "title": "Bahr Academy",
+    "img": "/images/academy.png",
+    "desc": "designed an online academy website with Adobe XD and built the frontend with my team using React.js.",
+    "github": "#",
+    "link": "#",
+    "isDark": false
+  },
+  {
+    "title": "Nike Redesign",
+    "img": "/images/Nike Redesign.png",
+    "desc": "I redesigned Nike website with Adobe XD then i implemented it with Next.js.",
+    "github": "#",
+    "link": "#",
+    "isDark": true
+  },
+  {
       "title": "Portfolio Website",
-      "img": "/images/academy.png",
+      "img": "/images/portfolio.png",
       "desc": "designed my own personal website with figma first then i implemented it with Next.js",
-      "github": "#",
+      "github": "https://github.com/ParsaAsdpr/portfolio-website",
       "link": "#",
       "isDark": false
     }
