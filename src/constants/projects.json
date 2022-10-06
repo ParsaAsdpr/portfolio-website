@@ -1,13 +1,5 @@
 [
   {
-    "title": "React Chat App",
-    "img": "/images/chat.png",
-    "desc": "very simple react chat app with socket.io and express.js",
-    "github": "https://github.com/ParsaAsdpr/React-chat-app",
-    "link": "#",
-    "isDark": true
-  },
-  {
     "title": "React Crypto App",
     "img": "/images/crypto.png",
     "desc": "crypto currency app with react, tailwind and axios",
@@ -16,12 +8,28 @@
     "isDark": true
   },
   {
+    "title": "React Quiz App",
+    "img": "/images/quiz.png",
+    "desc": "quiz application with react and tailwind",
+    "github": "https://github.com/ParsaAsdpr/React-quiz-app",
+    "link": "https://react-quiz-app-rust.vercel.app/",
+    "isDark": false
+  },
+  {
     "title": "Bahr Academy",
     "img": "/images/academy.png",
     "desc": "designed an online academy website with Adobe XD and built the frontend with my team using React.js.",
     "github": "#",
     "link": "#",
     "isDark": false
+  },
+  {
+    "title": "React Chat App",
+    "img": "/images/chat.png",
+    "desc": "very simple react chat app with socket.io and express.js",
+    "github": "https://github.com/ParsaAsdpr/React-chat-app",
+    "link": "#",
+    "isDark": true
   },
   {
     "title": "Nike Redesign",
