@@ -3,25 +3,33 @@ import Input from "../common/Input";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Parallax } from "react-parallax";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 const ContactForm = () => {
+  const router = useRouter();
 
   const Validate = yup.object().shape({
     yourName: yup
-      .string("Your name should not contain any special character")
+      .string("Yout name must be a string")
       .min(3, "Your name must contain between 3 and 20 letters")
       .max(25, "Your name must contain between 3 and 25 letters")
       .required("You forgot to enter your name"),
     yourEmail: yup
-      .string("Email must be in english")
+      .string("Your email must be a string")
       .min(7, "Your email must contain at least 7 characters")
       .email("You have entered invalid Email")
       .required("You forgot to enter your Email"),
-      subject: yup
-      .string("Subject should not contain any special character")
+    subject: yup
+      .string("Subject must be a string")
       .min(7, "Subject must contain at least 7 characters")
       .max(50, "Subject shouldn't be longer than 50 characters")
       .required("You forgot to enter subject"),
+    message: yup
+      .string("")
+      .min(20, "Your message must contain at least 20 characters")
+      .max(500, "Your message shouldn't be longer than 500 characters")
+      .required("You forgot to enter your message"),
   });
 
   const formik = useFormik({
@@ -29,13 +37,26 @@ const ContactForm = () => {
       yourName: "",
       yourEmail: "",
       subject: "",
+      message: "",
     },
     validationSchema: Validate,
     onSubmit: (values) => {
-      console.log(values);
+      let config = {
+        method: "post",
+        url: `${window.location.origin}/api/contact`,
+        headers: {
+          contentType: "application/json",
+        },
+        data: values,
+      };
+      try {
+        const response = axios(config);
+        if(response.status == 200) router.push("/")
+      } catch (err) {
+        console.log(err);
+      }
     },
   });
-
 
   return (
     <Parallax
@@ -91,8 +112,11 @@ const ContactForm = () => {
           </div>
 
           <textarea
+            name="message"
+            onChange={formik.handleChange}
+            value={formik.values.message}
             className={`border-b border-stone-500 mt-7 py-3 w-full max-w-full min-w-full max-h-[140px] min-h-[140px] duration-700 outline-none ${
-              precentage > 0.60
+              precentage > 0.6
                 ? "translate-x-0 opacity-1"
                 : "-translate-x-full opacity-0"
             }`}
@@ -100,13 +124,12 @@ const ContactForm = () => {
           ></textarea>
 
           <button
-          type="submit"
-            className={`mt-10 py-4 border font-bold border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition w-full duration-700 ${
-              precentage > 0.70
+            type="submit"
+            className={`mt-10 py-4 border font-bold border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition w-full duration-300 ${
+              precentage > 0.7
                 ? "translate-y-0 opacity-1"
                 : "translate-y-full opacity-0"
-            }` 
-          }
+            }`}
           >
             Send Message
           </button>
