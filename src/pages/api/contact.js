@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer'
-import { callbackPromise } from 'nodemailer/lib/shared';
 
 export default function handler(req, res) {
   const {yourName, yourEmail, subject, message} = req.body
@@ -20,22 +19,14 @@ export default function handler(req, res) {
     text: message,
   };
   try{
-    // const emailRes = transporter.sendMail({
-    //   from: yourEmail,
-    //   to: "parsaasadpour1199@gmail.com",
-    //   subject: `${yourName}: ${subject}`,
-    //   text: message,
-    // })
-
-    transporter.sendMail(mailOptions, async (error, info) => {
-      const data = {
-        error: error,
-        info: info,
-      };
-      callbackPromise(data)
-  });
+    const emailRes = transporter.sendMail({
+      from: yourEmail,
+      to: "parsaasadpour1199@gmail.com",
+      subject: `${yourName}: ${subject}`,
+      text: message,
+    })
 }
 catch (err) {
-  console.log(err)
+  console.log(err, emailRes)
 }
 }

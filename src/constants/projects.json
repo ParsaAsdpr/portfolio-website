@@ -1,19 +1,19 @@
 [
   {
+    "title": "Nike Redesign",
+    "img": "/images/Nike Redesign.png",
+    "desc": "I redesigned Nike website with Adobe XD then i implemented it with Next.js.",
+    "github": "https://github.com/ParsaAsdpr/nike",
+    "link": "https://nike-seven.vercel.app/",
+    "isDark": true
+  },
+  {
     "title": "React Crypto App",
     "img": "/images/crypto.png",
     "desc": "crypto currency app with react, tailwind and axios",
     "github": "https://github.com/ParsaAsdpr/react-crypto",
     "link": "https://react-crypto-blond.vercel.app",
     "isDark": true
-  },
-  {
-    "title": "React Quiz App",
-    "img": "/images/quiz.png",
-    "desc": "quiz application with react and tailwind",
-    "github": "https://github.com/ParsaAsdpr/React-quiz-app",
-    "link": "https://react-quiz-app-rust.vercel.app/",
-    "isDark": false
   },
   {
     "title": "Bahr Academy",
@@ -24,18 +24,18 @@
     "isDark": false
   },
   {
+    "title": "React Quiz App",
+    "img": "/images/quiz.png",
+    "desc": "quiz application with react and tailwind",
+    "github": "https://github.com/ParsaAsdpr/React-quiz-app",
+    "link": "https://react-quiz-app-rust.vercel.app/",
+    "isDark": false
+  },
+  {
     "title": "React Chat App",
     "img": "/images/chat.png",
     "desc": "very simple react chat app with socket.io and express.js",
     "github": "https://github.com/ParsaAsdpr/React-chat-app",
-    "link": "#",
-    "isDark": true
-  },
-  {
-    "title": "Nike Redesign",
-    "img": "/images/Nike Redesign.png",
-    "desc": "I redesigned Nike website with Adobe XD then i implemented it with Next.js.",
-    "github": "#",
     "link": "#",
     "isDark": true
   },

@@ -5,6 +5,9 @@ import * as yup from "yup";
 import { Parallax } from "react-parallax";
 import axios from "axios";
 import { useRouter } from "next/router";
+import TextArea from "../common/TextArea";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const router = useRouter();
@@ -51,14 +54,17 @@ const ContactForm = () => {
       };
       try {
         const response = axios(config);
-        if(response.status == 200) router.push("/")
+        console.log(response)
+        const id = toast.loading("Sending your message ...")
+        if (response.status == 200) toast.update(id, {render: "All is good", type: "success", isLoading: false});
       } catch (err) {
-        console.log(err);
+        toast.update(id, {render: "Something went wrong 😥", type: "error", isLoading: false });
       }
     },
   });
 
   return (
+    <>
     <Parallax
       style={{ overflow: "visible" }}
       strength={100}
@@ -111,17 +117,17 @@ const ContactForm = () => {
             />
           </div>
 
-          <textarea
+          <TextArea
             name="message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className={`border-b border-stone-500 mt-7 py-3 w-full max-w-full min-w-full max-h-[140px] min-h-[140px] duration-700 outline-none ${
-              precentage > 0.6
-                ? "translate-x-0 opacity-1"
-                : "-translate-x-full opacity-0"
-            }`}
-            placeholder="Your Message"
-          ></textarea>
+            error={formik.errors.message}
+            touched={formik.touched.message}
+            perc={precentage}
+            expected={0.5}
+            placeholder='Your Message'
+          />
+
 
           <button
             type="submit"
@@ -136,6 +142,8 @@ const ContactForm = () => {
         </form>
       )}
     ></Parallax>
+    <ToastContainer />
+    </>
   );
 };
 

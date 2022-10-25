@@ -28,7 +28,7 @@ export default function Home() {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="og:site_name" content="Parsa Asadpour Portfolio" />
           <meta
             name="og:description"
