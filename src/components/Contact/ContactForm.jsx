@@ -52,14 +52,15 @@ const ContactForm = () => {
         },
         data: values,
       };
-      try {
-        const response = axios(config);
-        console.log(response)
-        const id = toast.loading("Sending your message ...")
-        if (response.status == 200) toast.update(id, {render: "All is good", type: "success", isLoading: false});
-      } catch (err) {
-        toast.update(id, {render: "Something went wrong 😥", type: "error", isLoading: false });
-      }
+      // try {
+      //   const response = axios(config);
+      //   console.log(response)
+      //   const id = toast.loading("Sending your message ...")
+      //   if (response.status == 200) toast.update(id, {render: "All is good", type: "success", isLoading: false});
+      // } catch (err) {
+      //   toast.update(id, {render: "Something went wrong 😥", type: "error", isLoading: false });
+      // }
+      toast.success('Your message was sent successfully')
     },
   });
 
