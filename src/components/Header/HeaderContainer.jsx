@@ -63,7 +63,7 @@ const HeaderContainer = () => {
               HELLO
             </motion.h3>
             <div className="h-full pl-[5%] sm:pl-[10%] md:pl-[15%] lg:pl-[20%] float-left flex items-center">
-              <main>
+              <div>
                 <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-stone-900">
                   {brand.map((letter, index) => (
                     <span
@@ -90,7 +90,7 @@ const HeaderContainer = () => {
                   }}
                 />
                 <ScrollButton />
-              </main>
+              </div>
             </div>
 
             <div className=" absolute flex flex-col justify-center items-center gap-6 -right-4 z-10 -translate-y-1/2 top-1/2">

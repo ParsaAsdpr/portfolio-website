@@ -11,13 +11,13 @@ const Experience = () => {
       style={{overflow: 'visible'}}
         strength={100}
         renderLayer={(precentage) => (
-          <h1
+          <h2
             className={`text-2xl sm:text-5xl lg:text-6xl text-center parallax font-bold text-stone-800 duration-700 ${
               precentage > 0.25 ? "show" : "hide"
             }`}
           >
             My Experience
-          </h1>
+          </h2>
         )}
       ></Parallax>
       <div className="pt-20">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FiGithub, FiLink } from "react-icons/fi";
 
@@ -34,12 +35,13 @@ const ProjectCard = (props) => {
             ))}
           </div>
         </div>
-        <img
+        <Image
           src={props.img}
           alt="Project preview"
           draggable={false}
           className="project-img duration-1000"
-          
+          width={500}
+          height={300}
         />
       </div>
       <div className="flex flex-row pt-5 sm:pt-8 md:pt-10 relative px-1 sm:px-2 md:px-3 items-center">
