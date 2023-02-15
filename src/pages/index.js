@@ -9,16 +9,20 @@ import Projects from "../containers/Projects";
 import Contact from "../containers/Contact";
 import Footer from "../containers/Footer";
 
-const theme = Math.floor(Math.random() * 5) + 1;
-
 export default function Home() {
   const [fs, setFs] = useState(false);
-
+  const [theme, setTheme] = useState()
+  
   useEffect(() => {
+    fetch('/api/theme')
+      .then((res) => res.json())
+      .then((data) => {
+        setTheme(data.theme)
+      })
     setTimeout(() => {
       setFs(true);
-    }, 3100);
-  });
+    }, 3400);
+  }, []);
   return (
     <ThemeContext.Provider value={theme}>
       <div>
@@ -55,17 +59,13 @@ export default function Home() {
 
         <div>
           <WelcomeContainer />
-          {fs ? (
-            <>
+            <div className={fs ? 'block' : 'hidden'}>
               <Header></Header>
               <About></About>
               <Projects></Projects>
               <Contact></Contact>
               <Footer></Footer>
-            </>
-          ) : (
-            <></>
-          )}
+            </div>
         </div>
       </div>
     </ThemeContext.Provider>

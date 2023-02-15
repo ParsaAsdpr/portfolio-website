@@ -8,7 +8,7 @@ const Header = () => {
 
   setTimeout(() => {
     setSs(true);
-  }, 1800);
+  }, 5800);
 
   return (
     <ThemeContext.Consumer>
