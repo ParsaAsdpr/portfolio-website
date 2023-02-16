@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import WelcomeContainer from "../containers/WelcomeContainer";
 import { useState, useEffect } from "react";
 import Header from "../containers/Header";
-import ThemeContext from "../context/themeContext";
 import About from "../containers/About";
 import Projects from "../containers/Projects";
 import Contact from "../containers/Contact";
@@ -11,20 +9,14 @@ import Footer from "../containers/Footer";
 
 export default function Home() {
   const [fs, setFs] = useState(false);
-  const [theme, setTheme] = useState()
   
   useEffect(() => {
-    fetch('/api/theme')
-      .then((res) => res.json())
-      .then((data) => {
-        setTheme(data.theme)
-      })
     setTimeout(() => {
       setFs(true);
     }, 3400);
-  }, []);
+  }, [])
+
   return (
-    <ThemeContext.Provider value={theme}>
       <div>
         <Head>
           <title>Parsa Asadpour Portfolio</title>
@@ -68,6 +60,5 @@ export default function Home() {
             </div>
         </div>
       </div>
-    </ThemeContext.Provider>
   );
 }
