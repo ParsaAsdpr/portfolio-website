@@ -28,13 +28,13 @@ export default function Home() {
           <meta name="og:site_name" content="Parsa Asadpour Portfolio" />
           <meta
             name="og:description"
-            content="Parsa Asadpour | Young Web Developer and UI/UX Designer from Iran"
+            content="Parsa Asadpour | Junior Web Developer and UI/UX Designer from Iran"
           />
           <meta name="og:image" content="/Logo.png" />
 
           <meta
             name="description"
-            content="Parsa Asadpour | Young Web Developer and UI/UX Designer from Iran"
+            content="Parsa Asadpour | Junior Web Developer and UI/UX Designer from Iran"
           />
           <link rel="icon" href="/favicon.ico" />
           <meta
