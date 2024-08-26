@@ -17,13 +17,7 @@ const AboutText = () => {
                   precentage > 0.45 ? "show" : "hide"
                 }`}
               >
-                &quot;I&lsquo;m Frontend developer and UI/UX Designer with 3
-                years experience in web development and a year of experience
-                working with React.js & Next.js, currently studying computer
-                engeneering at Islamic Azad University and interested in
-                developing websites. i love learning and using the latest web
-                technologies and improving my skills. I am usually an active
-                person and i do my work creatively.&quot;
+                I am a Frontend Developer and UI/UX Designer with 3 years of web development experience, including a year working with React.js and Next.js. Currently studying Computer Engineering at Islamic Azad University, I&lsquo;m passionate about developing dynamic, user-friendly websites and continuously learning the latest web technologies. I approach my work with creativity and a proactive mindset, always aiming to improve my skills.
               </p>
             </div>
             <div
