@@ -1,9 +1,11 @@
 "use client";
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import Motion from "../common/Motion";
 import HeroContainer from "./HeroContainer";
 import TypeEffect from "./TypeEffect";
+import Button from "../common/Button";
+import { LuArrowDown } from "react-icons/lu";
 
 const Hero = () => {
   return (
@@ -47,11 +49,20 @@ const Hero = () => {
           justifyContent="center"
           alignItems="start"
           height="100%"
+          zIndex={20}
+          position="relative"
         >
           <Text fontFamily="dancing" fontSize={75}>
             Parsa Asadpour
           </Text>
           <TypeEffect />
+
+          <Button href="/My CV.pdf" download isExternal>
+            <HStack>
+              <Text >Download CV</Text>
+              <Icon as={LuArrowDown} transform='translateX(50%)' />
+            </HStack>
+          </Button>
         </VStack>
       </HeroContainer>
     </Box>

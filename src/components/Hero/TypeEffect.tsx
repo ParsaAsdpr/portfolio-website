@@ -8,6 +8,7 @@ const TypeEffect = () => {
         ".Typewriter": {
           fontSize: 22,
           width: "400px",
+          height: '100px'
         },
       }}
     >

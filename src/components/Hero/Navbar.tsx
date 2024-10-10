@@ -5,8 +5,8 @@ import React from "react";
 const Navbar = () => {
   const navItems = [
     { label: "About", href: "#" },
+    { label: "Experiences", href: "#" },
     { label: "Projects", href: "#" },
-    { label: "Experience", href: "#" },
   ];
   return (
     <HStack gap="12rem" justifyContent="center" transform="translateY(-50%)">
@@ -16,7 +16,7 @@ const Navbar = () => {
           as={Link}
           href={item.href}
           fontWeight={600}
-          fontSize={16}
+          fontSize={18}
           className="bebas-neue-regular"
           bg="#f8e179"
           px={3}

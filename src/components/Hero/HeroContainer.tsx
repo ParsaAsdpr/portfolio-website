@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import Motion from "../common/Motion";
 import Navbar from "./Navbar";
+import Socials from "./Socials";
 
 const HeroContainer = ({ children }: { children: ReactNode }) => {
   return (
@@ -36,6 +37,7 @@ const HeroContainer = ({ children }: { children: ReactNode }) => {
           </Motion>
         ))}
         <Navbar />
+        <Socials />
         {children}
       </Box>
     </Box>
