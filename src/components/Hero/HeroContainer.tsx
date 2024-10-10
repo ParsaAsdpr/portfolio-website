@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
-import React from "react";
+import React, { ReactNode } from "react";
 import Motion from "../common/Motion";
 import Navbar from "./Navbar";
 
-const HeroContainer = () => {
+const HeroContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <Box position="absolute" width="100%" height="100%" top="0%" right="0%">
+    <Box position="absolute" width="100%" height="100%" top="0%" right="0%" zIndex={10}>
       <Box
         position="relative"
         width="85%"
@@ -36,7 +36,7 @@ const HeroContainer = () => {
           </Motion>
         ))}
         <Navbar />
-        {}
+        {children}
       </Box>
     </Box>
   );

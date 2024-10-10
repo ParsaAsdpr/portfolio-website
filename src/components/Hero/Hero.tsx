@@ -1,7 +1,9 @@
-import { Box, Text } from "@chakra-ui/react";
+"use client";
+import { Box, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import Motion from "../common/Motion";
 import HeroContainer from "./HeroContainer";
+import TypeEffect from "./TypeEffect";
 
 const Hero = () => {
   return (
@@ -39,7 +41,19 @@ const Hero = () => {
         </Text>
       </Motion>
 
-      <HeroContainer />
+      <HeroContainer>
+        <VStack
+          paddingLeft="20%"
+          justifyContent="center"
+          alignItems="start"
+          height="100%"
+        >
+          <Text fontFamily="dancing" fontSize={75}>
+            Parsa Asadpour
+          </Text>
+          <TypeEffect />
+        </VStack>
+      </HeroContainer>
     </Box>
   );
 };
