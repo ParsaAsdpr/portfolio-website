@@ -17,7 +17,7 @@ const HeroContainer = ({ children }: { children: ReactNode }) => {
           <Motion
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: "100%", height: "100%", opacity: 1 }}
-            // transition={{ delay: 5.8, duration: 1.8 }}
+            transition={{ delay: 5.8, duration: 1.8 }}
             key={i}
             style={{
               position: "absolute",

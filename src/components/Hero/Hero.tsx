@@ -15,14 +15,14 @@ const Hero = () => {
           key={i}
           initial={{ translateX: `${i === 0 ? "-" : ""}100%` }}
           animate={{ translateX: 0 }}
-          // transition={{delay: 4.7, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 4.7, duration: 0.7, ease: "easeOut" }}
           style={{ width: "100%", height: "50%", backgroundColor: "#f8e179" }}
         ></Motion>
       ))}
       <Motion
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 2 }}
+        transition={{ delay: 5, duration: 2 }}
         style={{
           position: "absolute",
           top: "50%",
@@ -52,17 +52,30 @@ const Hero = () => {
           zIndex={20}
           position="relative"
         >
-          <Text fontFamily="dancing" fontSize={75}>
-            Parsa Asadpour
-          </Text>
+          <Motion
+            initial={{ opacity: 0, x: "-20%" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 8.4, duration: 0.6, ease: "easeOut" }}
+          >
+            <Text fontFamily="dancing" fontSize={75}>
+              Parsa Asadpour
+            </Text>
+          </Motion>
           <TypeEffect />
 
-          <Button href="/My CV.pdf" download isExternal>
-            <HStack>
-              <Text >Download CV</Text>
-              <Icon as={LuArrowDown} transform='translateX(50%)' />
-            </HStack>
-          </Button>
+          <Motion
+            initial={{ opacity: 0, y: "50%" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{delay: 9.2, duration: 0.6, ease: "easeOut"}}
+            style={{ display: "flex" }}
+          >
+            <Button href="/My CV.pdf" download isExternal>
+              <HStack>
+                <Text>Download CV</Text>
+                <Icon as={LuArrowDown} transform="translateX(50%)" />
+              </HStack>
+            </Button>
+          </Motion>
         </VStack>
       </HeroContainer>
     </Box>
