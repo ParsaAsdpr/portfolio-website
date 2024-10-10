@@ -6,3 +6,11 @@
   font-family: dancing;
   src: url(../fonts/DancingScript.ttf);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

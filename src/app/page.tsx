@@ -1,7 +1,11 @@
-import IntroSection from "@/components/Intro/IntroSection";
+import Hero from "@/components/Hero/Hero";
+import Intro from "@/components/Intro";
 
 export default function Home() {
   return (
-    <IntroSection />
+    <>
+      {/* <Intro /> */}
+      <Hero />
+    </>
   );
 }

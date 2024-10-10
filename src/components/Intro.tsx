@@ -1,13 +1,13 @@
 import { Box, Divider, Flex, Text } from "@chakra-ui/react";
-import Motion from "../common/Motion";
+import Motion from "./common/Motion";
 
-const IntroSection = () => {
+const Intro = () => {
   return (
     <Motion
       initial={{ top: 0 }}
       animate={{ top: "-100%" }}
       transition={{delay: 4}}
-      style={{ position: "fixed", left: 0, width: "100%", height: "100%" }}
+      style={{ position: "fixed", left: 0, width: "100%", height: "100%", zIndex: 99 }}
     >
       <Flex
         h="100vh"
@@ -65,4 +65,4 @@ const IntroSection = () => {
   );
 };
 
-export default IntroSection;
+export default Intro;
