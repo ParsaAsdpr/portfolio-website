@@ -1,20 +1,18 @@
-{
-  "experiences": [
-    {
-      "organization": "Sepehr Academy",
-      "from": "April 2020",
-      "to": "Februrary 2021",
-      "color": "#f8e179",
-      "position": "Frontend Developer",
-      "description": "Redesigned and developed online academy website for Sepehr Academy and its admin panel with a small team using React.js, Axios, TailwindCSS. i designed user interface with Adobe XD myself. this website contained courses and course pages, login and register page, admin panel, articles, etc... also features like applying and"
-    },
-    {
-      "organization": "Islamic Azad University Staff Cooperative Company",
-      "from": "April 2024",
-      "to": "September 2024",
-      "color": "#9be2c1",
-      "position": "Frontend Developer",
-      "description": "Led the frontend team in designing and developing a responsive website using Figma, ensuring brand consistency and cross-browser compatibility. Integrated frontend components with Laravel, utilizing Tailwind CSS for rapid styling and clean code. Managed tasks via Jira, optimizing website performance through regular"
-    }
-  ]
-}
+[
+  {
+    "organization": "Sepehr Academy",
+    "from": "April 2020",
+    "to": "Februrary 2021",
+    "color": "#f8e179",
+    "position": "Frontend Developer",
+    "description": "Redesigned and developed online academy website for Sepehr Academy and its admin panel with a small team using React.js, Axios, TailwindCSS. i designed user interface with Adobe XD myself. this website contained courses and course pages, login and register page, admin panel, articles, etc... also features like applying and"
+  },
+  {
+    "organization": "Islamic Azad University Staff Cooperative Company",
+    "from": "April 2024",
+    "to": "September 2024",
+    "color": "#9be2c1",
+    "position": "Frontend Developer",
+    "description": "Led the frontend team in designing and developing a responsive website using Figma, ensuring brand consistency and cross-browser compatibility. Integrated frontend components with Laravel, utilizing Tailwind CSS for rapid styling and clean code. Managed tasks via Jira, optimizing website performance through regular"
+  }
+]

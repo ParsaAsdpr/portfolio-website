@@ -4,13 +4,13 @@ import React, { ReactNode } from "react";
 
 interface Props extends LinkProps {
   children: ReactNode;
+  isLink?: boolean;
 }
 
-const Button = ({ children, ...props }: Props) => {
+const Button = ({ children, isLink = false, ...props }: Props) => {
   return (
     <ChakraLink
-      as={Link}
-      {...props}
+      as={isLink ? Link : "button"}
       _hover={{ textDecoration: "none" }}
       color="#333"
       border="1px solid #333"
@@ -18,7 +18,7 @@ const Button = ({ children, ...props }: Props) => {
       py={3}
       fontSize={18}
       position="relative"
-      overflow='hidden'
+      overflow="hidden"
       transition={"all 0.3s"}
       sx={{
         ":before": {
@@ -41,9 +41,10 @@ const Button = ({ children, ...props }: Props) => {
           right: "0",
         },
         ":hover": {
-            color: "#fff",
-        }
+          color: "#fff",
+        },
       }}
+      {...props}
     >
       {children}
     </ChakraLink>

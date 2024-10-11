@@ -73,7 +73,7 @@ const Hero = () => {
             transition={{ delay: 9.2, duration: 0.6, ease: "easeOut" }}
             style={{ display: "flex" }}
           >
-            <Button href="/My CV.pdf" download isExternal>
+            <Button isLink href="/My CV.pdf" download isExternal>
               <HStack>
                 <Text>Download CV</Text>
                 <Icon as={LuArrowDown} transform="translateX(50%)" />

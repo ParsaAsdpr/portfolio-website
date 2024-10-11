@@ -6,7 +6,7 @@ import Motion from "./Motion";
 
 const Title = ({ children }: { children: ReactNode }) => {
   const ref = useRef(null);
-  const view = useInView(ref);
+  const view = useInView(ref, { amount: 0.8, once: true });
 
   return (
     <HStack position="relative" width="100%" justifyContent="center" ref={ref}>

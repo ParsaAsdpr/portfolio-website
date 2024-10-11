@@ -1,6 +1,6 @@
 "use client";
 import { Text, VStack } from "@chakra-ui/react";
-import { experiences } from "../../constants/experiences.json";
+import experiences from "../../constants/experiences.json";
 import Motion from "../common/Motion";
 import ExperienceCard from "./ExperienceCard";
 
