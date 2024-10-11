@@ -39,7 +39,7 @@ const Socials = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 8.7 + i * 0.3 }}
         >
-          <Tooltip label={label} hasArrow bg="#333">
+          <Tooltip label={label} hasArrow bg="#333" placement="left">
             <Link
               href={link}
               target="_blank"
