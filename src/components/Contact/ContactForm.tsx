@@ -56,11 +56,11 @@ const ContactForm = () => {
         description: "Your message has been sent successfully",
         status: "success",
       });
-    } else if (response.status <= 500 && response.status >= 400) {
-      const { error } = await response.json();
+    } else if (response.status < 500 && response.status >= 400) {
+      const res = await response.json();
       toast({
         title: "Something went wrong",
-        description: error,
+        description: res.error,
         status: "error",
       });
     } else {
