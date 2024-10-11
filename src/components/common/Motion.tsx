@@ -7,7 +7,11 @@ interface Props extends HTMLMotionProps<"div"> {
 }
 
 const Motion = ({ children, ...props }: Props) => {
-  return <motion.div {...props}>{children}</motion.div>;
+  return (
+    <motion.div viewport={{ once: true, amount: 0.8 }} {...props}>
+      {children}
+    </motion.div>
+  );
 };
 
 export default Motion;

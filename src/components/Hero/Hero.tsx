@@ -6,6 +6,7 @@ import HeroContainer from "./HeroContainer";
 import TypeEffect from "./TypeEffect";
 import Button from "../common/Button";
 import { LuArrowDown } from "react-icons/lu";
+import DashedCircle from "../common/DashedCircle";
 
 const Hero = () => {
   return (
@@ -43,6 +44,9 @@ const Hero = () => {
         </Text>
       </Motion>
 
+      <DashedCircle size={1300} position={[-60, 70]} />
+      <DashedCircle size={1000} position={[40, -20]} />
+
       <HeroContainer>
         <VStack
           paddingLeft="20%"
@@ -66,7 +70,7 @@ const Hero = () => {
           <Motion
             initial={{ opacity: 0, y: "50%" }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{delay: 9.2, duration: 0.6, ease: "easeOut"}}
+            transition={{ delay: 9.2, duration: 0.6, ease: "easeOut" }}
             style={{ display: "flex" }}
           >
             <Button href="/My CV.pdf" download isExternal>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../assets/style/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Parsa Asadpour Portfolio",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ChakraProvider>{children}</ChakraProvider>
+        <AnimatePresence>
+          <ChakraProvider>{children}</ChakraProvider>
+        </AnimatePresence>
       </body>
     </html>
   );
