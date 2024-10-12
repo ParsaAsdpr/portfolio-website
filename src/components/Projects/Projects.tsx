@@ -12,7 +12,7 @@ const Projects = () => {
   const sliderRef = useRef(null);
   const view = useInView(sliderRef, { once: true });
   return (
-    <VStack py={20}>
+    <VStack py={20} id="projects">
       <Title>Projects</Title>
 
       <VStack

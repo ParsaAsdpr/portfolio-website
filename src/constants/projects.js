@@ -108,24 +108,6 @@ const data = [
     ],
     isDark: true,
   },
-  {
-    name: "React Quiz App",
-    description: "A simple quiz application with React and TailwindCSS",
-    image: "/images/quiz.webp",
-    links: [
-      {
-        name: "Github",
-        icon: SlSocialGithub,
-        url: "https://github.com/ParsaAsdpr/React-quiz-app",
-      },
-      {
-        name: "Demo",
-        icon: IoIosLink,
-        url: "https://react-quiz-app-rust.vercel.app/",
-      },
-    ],
-    isDark: false,
-  },
 ];
 
 export default data;

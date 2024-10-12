@@ -19,7 +19,7 @@ const Contact = () => {
     },
   ];
   return (
-    <VStack gap="7rem">
+    <VStack gap="7rem" id="contact">
       <Title>Contact</Title>
 
       <SimpleGrid columns={2} gap={10} maxW="7xl" w="full" mx="auto">

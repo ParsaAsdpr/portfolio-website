@@ -10,9 +10,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+*::selection {
+  background-color: #222;
+  color: #eee;
+}
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   overflow-x: hidden;
   font-family: Open Sans, Verdana, sans-serif;
+  animation: bodyScroll 7s linear;
 }
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
@@ -21,17 +29,32 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888
+  background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555
+  background: #555;
+}
+
+@keyframes bodyScroll {
+  0% {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  95% {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  100% {
+    height: auto;
+    overflow-y: auto;
+  }
 }

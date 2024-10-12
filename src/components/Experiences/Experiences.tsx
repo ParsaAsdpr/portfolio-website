@@ -6,7 +6,7 @@ import ExperienceCard from "./ExperienceCard";
 
 const Experiences = () => {
   return (
-    <VStack py="5rem" spacing="3rem">
+    <VStack py="5rem" spacing="3rem" id="experiences">
       <Motion
         initial={{ opacity: 0, y: "50%" }}
         whileInView={{ opacity: 1, y: 0 }}

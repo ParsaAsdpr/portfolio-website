@@ -7,7 +7,7 @@ import data from "../constants/about.json";
 
 const About = () => {
   return (
-    <VStack py="5rem" justifyContent="center">
+    <VStack py="5rem" justifyContent="center" id="about">
       <Title>About</Title>
       <Motion
         initial={{ opacity: 0, y: "50%", lineHeight: 3 }}

@@ -26,8 +26,8 @@ const ExperienceCard = ({
         pt={10}
       >
         <Motion
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: "50%", lineHeight: 3 }}
+          whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <Text fontSize={28} fontWeight={700} color="#333">
@@ -35,8 +35,8 @@ const ExperienceCard = ({
           </Text>
         </Motion>
         <Motion
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: "50%", lineHeight: 3 }}
+          whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           <Text fontStyle="italic" color="#888">
@@ -88,8 +88,8 @@ const ExperienceCard = ({
         justifyContent="center"
       >
         <Motion
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: "50%", lineHeight: 3 }}
+          whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <Text fontSize={24} fontWeight={700} whiteSpace="nowrap" color="#333">
@@ -97,8 +97,8 @@ const ExperienceCard = ({
           </Text>
         </Motion>
         <Motion
-          initial={{ opacity: 0, y: "50%" }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: "50%", lineHeight: 3 }}
+          whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <Text fontSize={18}>{experience.description}</Text>

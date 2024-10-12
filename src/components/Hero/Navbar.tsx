@@ -5,9 +5,9 @@ import Motion from "../common/Motion";
 
 const Navbar = () => {
   const navItems = [
-    { label: "About", href: "#" },
-    { label: "Experiences", href: "#" },
-    { label: "Projects", href: "#" },
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
   return (
     <HStack gap="12rem" justifyContent="center" transform="translateY(-50%)">
