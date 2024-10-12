@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import schema from "@/validation/schema";
 import { z } from "zod";
 import useToast from "@/hooks/useToast";
+import Motion from "../common/Motion";
 
 type Schema = z.infer<typeof schema>;
 
@@ -73,9 +74,15 @@ const ContactForm = () => {
   };
   return (
     <VStack alignItems="start" mb={20} w="full" spacing={14}>
-      <Text fontStyle="italic" fontSize={45} fontWeight={700}>
-        Let&apos;s Work Together
-      </Text>
+      <Motion
+        initial={{ opacity: 0, y: "50%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Text fontStyle="italic" fontSize={45} fontWeight={700}>
+          Let&apos;s Work Together
+        </Text>
+      </Motion>
 
       <chakra.form
         w="full"
@@ -86,16 +93,29 @@ const ContactForm = () => {
       >
         <FormProvider {...methods}>
           <HStack w="full" spacing={6}>
-            {inputs.slice(0, 2).map((input) => (
-              <FormInput key={input.name} {...input} />
+            {inputs.slice(0, 2).map((input, i) => (
+              <FormInput key={input.name} {...input} delay={i * 0.2} />
             ))}
           </HStack>
-          {inputs.slice(2).map((input) => (
-            <FormInput key={input.name} {...input} />
+          {inputs.slice(2).map((input, i) => (
+            <FormInput key={input.name} {...input} delay={i * 0.2 * 0.2} />
           ))}
-          <Button fontWeight={700} fontSize={15} py={4} type="submit">
-            Send Message
-          </Button>
+          <Motion
+            initial={{ opacity: 0, y: "50%" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 , duration: 0.6 }}
+            style={{ width: "100%" }}
+          >
+            <Button
+              fontWeight={700}
+              w="full"
+              fontSize={15}
+              py={4}
+              type="submit"
+            >
+              Send Message
+            </Button>
+          </Motion>
         </FormProvider>
       </chakra.form>
     </VStack>

@@ -1,7 +1,6 @@
 "use client";
 import {
   Box,
-  Divider,
   HStack,
   Icon,
   Text,
@@ -24,6 +23,7 @@ const ProjectCard = ({
     description: string;
     image: string;
     links: { name: string; icon: IconType; url: string }[];
+    isDark: boolean;
   };
 }) => {
   return (
@@ -76,11 +76,11 @@ const ProjectCard = ({
               visibility="hidden"
               opacity={0}
               transition="opacity 0.3s 0.2s, color 0.3s, background 0.3s"
-              color="white"
-              border="2px solid #fff"
+              color={project.isDark ? "#fff" : "#111"}
+              border={`2px solid ${project.isDark ? "#fff" : "#111"}`}
               _hover={{
-                backgroundColor: "#fff",
-                color: "#111",
+                backgroundColor: project.isDark ? "#fff" : "#111",
+                color: project.isDark ? "#111" : "#fff",
               }}
             >
               <Icon fontSize={30} as={link.icon} />
@@ -98,15 +98,20 @@ const ProjectCard = ({
         ></Box>
       </Box>
       <VStack px={2}>
-        <HStack width="100%" alignItems="center">
-          <Text flexShrink={0} fontWeight={700} fontSize={21}>
+        <HStack width="100%" alignItems="center" position="relative">
+          <Text
+            as="span"
+            flexShrink={1}
+            fontWeight={700}
+            fontSize={21}
+            position="relative"
+            display="inline-block"
+            bg="white"
+            overflow="hidden"
+            width="100%"
+          >
             {project.name}
           </Text>
-          <Divider
-            borderColor="#333"
-            flexGrow={1}
-            transform="translateY(400%)"
-          />
         </HStack>
         <Text>{project.description} (Hover on Image)</Text>
       </VStack>

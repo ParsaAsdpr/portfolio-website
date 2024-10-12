@@ -9,12 +9,14 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import Motion from "../common/Motion";
 
 type InputPropType = InputProps & TextareaProps;
 interface Props extends InputPropType {
   name: string;
+  delay: number;
 }
-const FormInput = ({ placeholder, name, type, ...props }: Props) => {
+const FormInput = ({ placeholder, name, type, delay, ...props }: Props) => {
   const inputProps = {
     id: name,
     placeholder: placeholder,
@@ -35,16 +37,25 @@ const FormInput = ({ placeholder, name, type, ...props }: Props) => {
     formState: { errors },
   } = useFormContext();
   return (
-    <FormControl isInvalid={errors[name] ? true : false}>
-      {type === "textarea" ? (
-        <Textarea {...inputProps} {...register(name)} minH="150px" />
-      ) : (
-        <Input {...inputProps} {...register(name)} />
-      )}
-      {errors[name] && (
-        <FormErrorMessage>{errors[name]?.message?.toString()}</FormErrorMessage>
-      )}
-    </FormControl>
+    <Motion
+      initial={{ opacity: 0, y: "50%" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay, duration: 0.6 }}
+      style={{ width: "100%" }}
+    >
+      <FormControl isInvalid={errors[name] ? true : false}>
+        {type === "textarea" ? (
+          <Textarea {...inputProps} {...register(name)} minH="150px" />
+        ) : (
+          <Input {...inputProps} {...register(name)} />
+        )}
+        {errors[name] && (
+          <FormErrorMessage>
+            {errors[name]?.message?.toString()}
+          </FormErrorMessage>
+        )}
+      </FormControl>
+    </Motion>
   );
 };
 

@@ -4,6 +4,7 @@ import React from "react";
 import Title from "../common/Title";
 import ContactForm from "./ContactForm";
 import useToast from "@/hooks/useToast";
+import Motion from "../common/Motion";
 
 const Contact = () => {
   const toast = useToast();
@@ -25,37 +26,55 @@ const Contact = () => {
         <ContactForm />
         <VStack alignItems="center">
           <VStack alignItems="start" gap={8}>
-            <Text fontStyle="italic" fontSize={30} fontWeight={700} mb={4}>
-              Get In Touch
-            </Text>
+            <Motion
+              initial={{ opacity: 0, y: "50%" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Text fontStyle="italic" fontSize={30} fontWeight={700} mb={4}>
+                Get In Touch
+              </Text>
+            </Motion>
             {contactInfo.map((info) => (
               <VStack key={info.title} alignItems="start">
-                <Text fontSize={19} fontWeight={700}>
-                  {info.title}
-                </Text>
-                <Tooltip
-                  label="Click to Copy"
-                  hasArrow
-                  bg="#333"
-                  placement="bottom"
+                <Motion
+                  initial={{ opacity: 0, y: "50%" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
                 >
-                  <Text
-                    color="#777"
-                    fontWeight={400}
-                    fontSize={16}
-                    cursor="pointer"
-                    onClick={() =>
-                      navigator.clipboard.writeText(info.text).then(() =>
-                        toast({
-                          title: "Text copied successfully.",
-                          status: "success",
-                        })
-                      )
-                    }
-                  >
-                    {info.text}
+                  <Text fontSize={19} fontWeight={700}>
+                    {info.title}
                   </Text>
-                </Tooltip>
+                </Motion>
+                <Motion
+                  initial={{ opacity: 0, y: "50%" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Tooltip
+                    label="Click to Copy"
+                    hasArrow
+                    bg="#333"
+                    placement="bottom"
+                  >
+                    <Text
+                      color="#777"
+                      fontWeight={400}
+                      fontSize={16}
+                      cursor="pointer"
+                      onClick={() =>
+                        navigator.clipboard.writeText(info.text).then(() =>
+                          toast({
+                            title: "Text copied successfully.",
+                            status: "success",
+                          })
+                        )
+                      }
+                    >
+                      {info.text}
+                    </Text>
+                  </Tooltip>
+                </Motion>
               </VStack>
             ))}
           </VStack>

@@ -26,8 +26,9 @@ const Projects = () => {
           spacing="10px"
           width={(430 + 10) * projects.length}
           justifyContent="start"
+          alignItems='start'
           transition="transform 0.5s ease-in-out"
-          transform={`translateX(${-430 * offset}px)`}
+          transform={`translateX(${(-430 - 10) * offset}px)`}
           ref={sliderRef}
         >
           {projects.map((project, i) => (

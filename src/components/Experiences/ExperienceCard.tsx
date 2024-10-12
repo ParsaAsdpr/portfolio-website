@@ -90,7 +90,7 @@ const ExperienceCard = ({
         <Motion
           initial={{ opacity: 0, y: "50%" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
           <Text fontSize={24} fontWeight={700} whiteSpace="nowrap" color="#333">
             {experience.position}
@@ -99,7 +99,7 @@ const ExperienceCard = ({
         <Motion
           initial={{ opacity: 0, y: "50%" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
           <Text fontSize={18}>{experience.description}</Text>
         </Motion>

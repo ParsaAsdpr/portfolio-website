@@ -15,7 +15,7 @@ const Navbar = () => {
         <Motion
           initial={{ opacity: 0, y: "-50%" }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 7.8 + (i * 0.3) }}
+          transition={{ delay: 7.8 + i * 0.3 }}
           key={item.label}
         >
           <ChakraLink
@@ -26,7 +26,7 @@ const Navbar = () => {
             className="bebas-neue-regular"
             bg="#f8e179"
             px={3}
-            py={1}
+            py={1.5}
             position="relative"
             overflow="hidden"
             _hover={{ textDecoration: "none" }}
@@ -53,8 +53,8 @@ const Navbar = () => {
                 right: 0,
               },
               ":hover:after, :hover:before": {
-                width: "100%",
-                height: "100%",
+                width: "calc(100% - 1px)",
+                height: "calc(100% - 1px)",
                 opacity: 1,
               },
             }}
