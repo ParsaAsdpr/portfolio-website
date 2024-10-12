@@ -5,6 +5,11 @@ import { ChakraProvider } from "@chakra-ui/react";
 export const metadata: Metadata = {
   title: "Parsa Asadpour Portfolio",
   description: "",
+  icons: {
+    icon: {
+      url: "/favicon.ico",
+    },
+  }
 };
 
 export default function RootLayout({

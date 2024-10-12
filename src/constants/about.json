@@ -1,17 +1,17 @@
 {
-  "about": " I am a Frontend Developer and UI/UX Designer with 3 years of web development experience, including a year working with React.js and Next.js. Currently studying Computer Engineering at Islamic Azad University, I‘m passionate about developing dynamic, user-friendly websites and continuously learning the latest web technologies. I approach my work with creativity and a proactive mindset, always aiming to improve my skills.",
+  "about": " Highly motivated Fullstack Developer with 3 years of hands-on experience specializing in web development and modern web technologies. Proficient in React.js, Next.js, TypeScript, Tailwind CSS, and Chakra UI, with fullstack expertise using MongoDB, MySQL and Prisma for efficient backend integration. Currently pursuing a degree in Computer Engineering at Azad University, with a passion for creating seamless user experiences and a strong interest in frontend technologies.",
   "Journies": [
     {
       "title": "UI/UX Design Journey",
-      "desc": "I was taught UI/UX desgining by Hamed Nazari. This was my first step to start Web development"
+      "desc": "My introduction to UI/UX design was under the guidance of Hamed Nazari, marking the first step in my path toward web development."
     },
     {
       "title": "Web Development",
-      "desc": "I learnt web development basics like html, javascript, css and .net framework at Bahr academy by Professor Mohammad Bahrololoumi"
+      "desc": "I gained foundational knowledge in web development, learning HTML, JavaScript, CSS, and the .NET framework at Bahr Academy, where I was mentored by Professor Mohammad Bahrololoumi."
     },
     {
       "title": "React.js and Next.js",
-      "desc": "I was introduced to React.js library by my friends. I learnt React.js watching Mosh tutorials and i've been working with it for over a year"
+      "desc": "I was introduced to React.js by friends and deepened my skills with Mosh Hamedani's tutorials. With over a year of experience, I’ve built several projects using React.js and Next.js."
     }
   ]
 }
