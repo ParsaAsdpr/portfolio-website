@@ -14,11 +14,11 @@ const TypeEffect = () => {
 
   return (
     <Box
-      w="400px"
+      w={["220px", "275px", "320px", "400px"]}
       h="100px"
       sx={{
         ".Typewriter": {
-          fontSize: 22,
+          fontSize: [16, 18, 20, 22],
         },
       }}
     >

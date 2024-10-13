@@ -10,7 +10,12 @@ const Navbar = () => {
     { label: "Contact", href: "#contact" },
   ];
   return (
-    <HStack gap="12rem" justifyContent="center" transform="translateY(-50%)">
+    <HStack
+      justifyContent="space-between"
+      transform="translateY(-50%)"
+      width={["90%", "80%", "70%", "60%", "50%"]}
+      mx="auto"
+    >
       {navItems.map((item, i) => (
         <Motion
           initial={{ opacity: 0, y: "-50%" }}
@@ -22,10 +27,10 @@ const Navbar = () => {
             as={Link}
             href={item.href}
             fontWeight={600}
-            fontSize={18}
+            fontSize={[14, 15, 16, 17, 18]}
             className="bebas-neue-regular"
             bg="#f8e179"
-            px={3}
+            px={[1, 2, 3]}
             py={1.5}
             position="relative"
             overflow="hidden"

@@ -1,5 +1,5 @@
 "use client";
-import { HStack, Text, VStack } from "@chakra-ui/react";
+import { SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { chakra } from "@chakra-ui/react";
 import FormInput from "./FormInput";
@@ -78,8 +78,14 @@ const ContactForm = () => {
         initial={{ opacity: 0, y: "50%" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        style={{ width: "100%" }}
       >
-        <Text fontStyle="italic" fontSize={45} fontWeight={700}>
+        <Text
+          fontStyle="italic"
+          fontSize={[27, 30, 35, 40, 45]}
+          textAlign={{ base: "center", lg: "left" }}
+          fontWeight={700}
+        >
           Let&apos;s Work Together
         </Text>
       </Motion>
@@ -92,25 +98,25 @@ const ContactForm = () => {
         onSubmit={methods.handleSubmit(onSubmit)}
       >
         <FormProvider {...methods}>
-          <HStack w="full" spacing={6}>
+          <SimpleGrid columns={{ base: 1, sm: 2 }} w="full" spacing={6}>
             {inputs.slice(0, 2).map((input, i) => (
               <FormInput key={input.name} {...input} delay={i * 0.2} />
             ))}
-          </HStack>
+          </SimpleGrid>
           {inputs.slice(2).map((input, i) => (
             <FormInput key={input.name} {...input} delay={i * 0.2 * 0.2} />
           ))}
           <Motion
             initial={{ opacity: 0, y: "50%" }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 , duration: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
             style={{ width: "100%" }}
           >
             <Button
               fontWeight={700}
               w="full"
-              fontSize={15}
-              py={4}
+              fontSize={[13, 14, 15]}
+              py={[3, 3, 4]}
               type="submit"
             >
               Send Message

@@ -1,4 +1,4 @@
-import { Icon, Link, Tooltip, VStack } from "@chakra-ui/react";
+import { Flex, Icon, Link, Tooltip } from "@chakra-ui/react";
 import React from "react";
 import {
   FaGithub,
@@ -24,13 +24,14 @@ const Socials = () => {
     { icon: FaSquarePhone, link: "tel:+989939604178", label: "Phone" },
   ];
   return (
-    <VStack
+    <Flex
       position="absolute"
-      right="0"
+      right={["50%", "0"]}
       transform="translate(50%, -50%)"
-      top="50%"
+      top={["100%", "50%"]}
+      flexDir={["row", "column"]}
       zIndex={30}
-      spacing={6}
+      gap={[4, 5, 6]}
     >
       {socials.map(({ icon, link, label }, i) => (
         <Motion
@@ -44,11 +45,11 @@ const Socials = () => {
               href={link}
               target="_blank"
               bg="#f8e179"
-              fontSize={33}
+              fontSize={[24, 26, 28, 30, 33]}
               display="flex"
               alignItems="center"
               justifyContent="center"
-              boxSize="36px"
+              boxSize={["28px", "32px", "34px", "36px"]}
               _hover={{
                 transform: "scale(1.1)",
               }}
@@ -58,7 +59,7 @@ const Socials = () => {
           </Tooltip>
         </Motion>
       ))}
-    </VStack>
+    </Flex>
   );
 };
 

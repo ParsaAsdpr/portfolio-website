@@ -5,8 +5,8 @@ const Intro = () => {
   return (
     <Motion
       initial={{ top: 0 }}
-      animate={{ top: "-100%" }}
-      transition={{delay: 4}}
+      animate={{ top: "-200%" }}
+      transition={{delay: 4, duration: 1.1, ease: "easeOut"}}
       style={{ position: "fixed", left: 0, width: "100%", height: "100%", zIndex: 99 }}
     >
       <Flex
@@ -25,7 +25,7 @@ const Intro = () => {
           >
             <Text
               fontWeight="bold"
-              fontSize={70}
+              fontSize={[50, 60, 70]}
               fontFamily="anton"
               lineHeight={1.2}
               color="#1A202C"
@@ -51,7 +51,7 @@ const Intro = () => {
           transition={{ delay: 2.4, duration: 0.4, ease: "easeInOut" }}
         >
           <Text
-            fontSize={100}
+            fontSize={[70, 80, 90, 100]}
             fontFamily="dancing"
             color="#fff"
             fontWeight="900"

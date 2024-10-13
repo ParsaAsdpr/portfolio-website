@@ -27,11 +27,11 @@ const Title = ({ children }: { children: ReactNode }) => {
       >
         <Text
           fontWeight={700}
-          fontSize={33}
+          fontSize={[26, 27, 28, 29, 30]}
           className="verdana"
           bg="white"
           px={3}
-          color='#333'
+          color="#333"
         >
           {children}
         </Text>

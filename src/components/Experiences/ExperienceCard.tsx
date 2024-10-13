@@ -16,13 +16,20 @@ const ExperienceCard = ({
   };
 }) => {
   return (
-    <HStack alignItems="start" flexBasis={0} width="65%" mx="auto" spacing={10}>
+    <HStack
+      alignItems="start"
+      flexBasis={0}
+      width={["100%", "90%", "80%", "70%", "65%"]}
+      mx="auto"
+      spacing={[3, 4, 6, 8, 10]}
+    >
       <VStack
         alignItems="start"
         justifyContent="flex-start"
         flexGrow={1.35}
         flexBasis={1}
-        pl="15%"
+        pl={[0, 0, "5%", "10%", "15%"]}
+        px={[5, 5, 0]}
         pt={10}
       >
         <Motion
@@ -30,7 +37,11 @@ const ExperienceCard = ({
           whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <Text fontSize={28} fontWeight={700} color="#333">
+          <Text
+            fontSize={[15, 16, 18, 20, 22]}
+            fontWeight={700}
+            color="#333"
+          >
             {experience.organization}
           </Text>
         </Motion>
@@ -39,7 +50,7 @@ const ExperienceCard = ({
           whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.7, duration: 0.6 }}
         >
-          <Text fontStyle="italic" color="#888">
+          <Text fontSize={[10, 12, 13, 15, 17]} fontStyle="italic" color="#888">
             {experience.from} - {experience.to}
           </Text>
         </Motion>
@@ -80,7 +91,7 @@ const ExperienceCard = ({
       </VStack>
 
       <VStack
-        pt={10}
+        pt={[6, 7, 10]}
         flexGrow={2}
         flexBasis={1}
         flexShrink={0}
@@ -92,7 +103,12 @@ const ExperienceCard = ({
           whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <Text fontSize={24} fontWeight={700} whiteSpace="nowrap" color="#333">
+          <Text
+            fontSize={[16, 18, 20, 22, 25]}
+            fontWeight={700}
+            whiteSpace="nowrap"
+            color="#333"
+          >
             {experience.position}
           </Text>
         </Motion>
@@ -101,7 +117,9 @@ const ExperienceCard = ({
           whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <Text fontSize={18}>{experience.description}</Text>
+          <Text fontSize={[12, 13, 15, 17, 18]} color="#555">
+            {experience.description}
+          </Text>
         </Motion>
       </VStack>
     </HStack>

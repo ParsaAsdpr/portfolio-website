@@ -33,7 +33,7 @@ const Hero = () => {
       >
         <Text
           fontWeight="bold"
-          fontSize={350}
+          fontSize={[110, 170, 230, 275, 325, 350]}
           fontFamily="anton"
           lineHeight={1.2}
           transform="translate(-50%, -50%)"
@@ -49,7 +49,7 @@ const Hero = () => {
 
       <HeroContainer>
         <VStack
-          paddingLeft="20%"
+          paddingLeft={["5%", "10%", "20%"]}
           justifyContent="center"
           alignItems="start"
           height="100%"
@@ -61,7 +61,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 8.4, duration: 0.6, ease: "easeOut" }}
           >
-            <Text fontFamily="dancing" fontSize={75}>
+            <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]}>
               Parsa Asadpour
             </Text>
           </Motion>
@@ -74,7 +74,7 @@ const Hero = () => {
             style={{ display: "flex" }}
           >
             <Button isLink href="/My CV.pdf" download isExternal>
-              <HStack>
+              <HStack fontSize={[15, 17, 20]}>
                 <Text>Download CV</Text>
                 <Icon as={LuArrowDown} transform="translateX(50%)" />
               </HStack>

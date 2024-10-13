@@ -14,7 +14,7 @@ const Button = ({ children, isLink = false, ...props }: Props) => {
       _hover={{ textDecoration: "none" }}
       color="#333"
       border="1px solid #333"
-      px={8}
+      px={[5, 6, 7, 8]}
       py={3}
       fontSize={18}
       position="relative"

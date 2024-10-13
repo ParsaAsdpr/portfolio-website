@@ -22,16 +22,16 @@ const Contact = () => {
     <VStack gap="7rem" id="contact">
       <Title>Contact</Title>
 
-      <SimpleGrid columns={2} gap={10} maxW="7xl" w="full" mx="auto">
+      <SimpleGrid columns={{base: 1, lg: 2}} gap={10} maxW="7xl" w="full" mx="auto" px={{base: 5, sm: 7, '2xl': 0}}>
         <ContactForm />
-        <VStack alignItems="center">
+        <VStack alignItems={{base: "left", lg: "center"}}>
           <VStack alignItems="start" gap={8}>
             <Motion
               initial={{ opacity: 0, y: "50%" }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Text fontStyle="italic" fontSize={30} fontWeight={700} mb={4}>
+              <Text fontStyle="italic" fontSize={[23, 25, 27, 30]} fontWeight={700} mb={4}>
                 Get In Touch
               </Text>
             </Motion>

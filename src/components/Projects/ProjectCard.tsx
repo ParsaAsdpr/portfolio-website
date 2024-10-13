@@ -14,10 +14,12 @@ import { IconType } from "react-icons";
 const ProjectCard = ({
   view,
   delay,
+  size,
   project,
 }: {
   view: boolean;
   delay: number;
+  size: number;
   project: {
     name: string;
     description: string;
@@ -28,7 +30,7 @@ const ProjectCard = ({
 }) => {
   return (
     <VStack
-      width="430px"
+      width={`${size}px`}
       spacing={4}
       transform={`translateX(${view ? "0" : "100%"})`}
       opacity={view ? 1 : 0}
@@ -38,7 +40,7 @@ const ProjectCard = ({
       <Box
         position="relative"
         width="100%"
-        height="250px"
+        height={["170px", "200px", "250px"]}
         overflow="hidden"
         border="1px solid #333"
         rounded={5}
@@ -69,7 +71,7 @@ const ProjectCard = ({
               href={link.url}
               target="_blank"
               rounded="full"
-              boxSize="60px"
+              boxSize={["45px", "50px", "55px","60px"]}
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -83,7 +85,7 @@ const ProjectCard = ({
                 color: project.isDark ? "#111" : "#fff",
               }}
             >
-              <Icon fontSize={30} as={link.icon} />
+              <Icon fontSize={[20, 23, 26, 30]} as={link.icon} />
             </ChakraLink>
           ))}
         </HStack>
@@ -103,7 +105,7 @@ const ProjectCard = ({
             as="span"
             flexShrink={1}
             fontWeight={700}
-            fontSize={21}
+            fontSize={[ 17, 19, 21]}
             position="relative"
             display="inline-block"
             bg="white"
@@ -113,7 +115,7 @@ const ProjectCard = ({
             {project.name}
           </Text>
         </HStack>
-        <Text>{project.description} (Hover on Image)</Text>
+        <Text fontSize={[14, 16, 18]}>{project.description} (Hover on Image)</Text>
       </VStack>
     </VStack>
   );
