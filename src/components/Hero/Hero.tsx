@@ -61,7 +61,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 8.4, duration: 0.6, ease: "easeOut" }}
           >
-            <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]}>
+            <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]} as='h1'>
               Parsa Asadpour
             </Text>
           </Motion>

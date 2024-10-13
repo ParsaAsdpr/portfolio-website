@@ -31,6 +31,7 @@ const About = () => {
           fontSize={[17, 18, 19, 20, 21]}
           py={["1.25rem", "2rem", "3rem"]}
           px={[4, 7, 0]}
+          as='main'
         >
           {data.about}
         </Text>
