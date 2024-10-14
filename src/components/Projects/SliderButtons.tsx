@@ -7,9 +7,11 @@ const SliderButtons = ({
   offset,
   setOffset,
   projectLength,
+  itemsPerView
 }: {
   offset: number;
   projectLength: number;
+  itemsPerView: number | undefined;
   setOffset: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
@@ -33,7 +35,7 @@ const SliderButtons = ({
             </Button>
           </Motion>
         )}
-        {offset < projectLength - 3 && (
+        {offset < projectLength - (itemsPerView || 3) && (
           <Motion
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}

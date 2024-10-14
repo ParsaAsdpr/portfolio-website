@@ -17,7 +17,7 @@ const Hero = () => {
           initial={{ translateX: `${i === 0 ? "-" : ""}100%` }}
           animate={{ translateX: 0 }}
           transition={{ delay: 4.7, duration: 0.7, ease: "easeOut" }}
-          style={{ width: "100%", height: "50%", backgroundColor: "#f8e179" }}
+          style={{ width: "100%", height: "50%", backgroundColor: '#f8e179' }}
         ></Motion>
       ))}
       <Motion
@@ -56,15 +56,19 @@ const Hero = () => {
           zIndex={20}
           position="relative"
         >
-          <Motion
-            initial={{ opacity: 0, x: "-20%" }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 8.4, duration: 0.6, ease: "easeOut" }}
-          >
-            <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]} as='h1'>
-              Parsa Asadpour
-            </Text>
-          </Motion>
+          <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]} as="h1">
+            {"Parsa Asadpour".split("").map((letter, index) => (
+              <Motion
+                key={index}
+                initial={{ opacity: 0, left: "-50%" }}
+                animate={{ opacity: 1, left: 0 }}
+                transition={{ delay: 8 + (index * 0.1), duration: 0.5 }}
+                style={{ display: "inline", position: "relative" }}
+              >
+                {letter}
+              </Motion>
+            ))}
+          </Text>
           <TypeEffect />
 
           <Motion

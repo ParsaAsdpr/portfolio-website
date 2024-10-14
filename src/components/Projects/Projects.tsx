@@ -54,6 +54,7 @@ const Projects = () => {
         </HStack>
 
         <SliderButtons
+          itemsPerView={itemsPerView}
           offset={offset}
           setOffset={setOffset}
           projectLength={projects.length}

@@ -1,27 +1,7 @@
 import { Box, Flex, HStack, Link, Text, Tooltip } from "@chakra-ui/react";
 import React from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaSquarePhone,
-  FaTelegram,
-} from "react-icons/fa6";
-
+import socials from "../constants/socials";
 const Footer = () => {
-  const socials = [
-    { icon: FaTelegram, link: "https://t.me/abhishekkumar", label: "Telegram" },
-    {
-      icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/parsa-asadpour-42014322b",
-      label: "LinkedIn",
-    },
-    {
-      icon: FaGithub,
-      link: "https://github.com/ParsaAsdpr",
-      label: "Github",
-    },
-    { icon: FaSquarePhone, link: "tel:+989939604178", label: "Phone" },
-  ];
   return (
     <Box bg="#262626" py={[8, 10, 12, 14]} mt={{ base: 20, lg: 0 }}>
       <Flex
