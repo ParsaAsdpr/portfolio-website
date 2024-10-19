@@ -3,7 +3,7 @@ import React from "react";
 import socials from "../constants/socials";
 const Footer = () => {
   return (
-    <Box bg="#262626" py={[8, 10, 12, 14]} mt={{ base: 20, lg: 0 }}>
+    <Box as="footer" bg="#262626" py={[8, 10, 12, 14]} mt={{ base: 20, lg: 0 }}>
       <Flex
         mx="auto"
         maxW="7xl"

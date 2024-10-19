@@ -1,5 +1,5 @@
 "use client";
-import { Divider, HStack, Text } from "@chakra-ui/react";
+import { Divider, Heading, HStack } from "@chakra-ui/react";
 import { useInView } from "framer-motion";
 import React, { ReactNode, useRef } from "react";
 import Motion from "./Motion";
@@ -25,7 +25,7 @@ const Title = ({ children }: { children: ReactNode }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Text
+        <Heading
           fontWeight={700}
           fontSize={[26, 27, 28, 29, 30]}
           className="verdana"
@@ -34,7 +34,7 @@ const Title = ({ children }: { children: ReactNode }) => {
           color="#333"
         >
           {children}
-        </Text>
+        </Heading>
       </Motion>
       <Divider
         position="absolute"

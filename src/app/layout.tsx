@@ -1,12 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../assets/style/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
+  applicationName: "Parsa Asadpour Portfolio",
   title: "Parsa Asadpour Portfolio",
+  formatDetection: {
+    telephone: false,
+  },
   description:
     "Parsa Asadpour | Junior Fullstack Developer and UI/UX Designer from Iran",
   authors: { name: "Parsa Asadpour", url: "https://github.com/ParsaAsdpr" },
-  themeColor: "#F8E179",
   robots: {
     index: true,
     follow: true,
@@ -44,6 +49,14 @@ export const metadata: Metadata = {
     },
   },
 };
+export const viewport: Viewport = {
+  themeColor: "#F8E179",
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export default function RootLayout({
   children,
@@ -53,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Analytics />
         <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>

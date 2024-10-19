@@ -11,6 +11,7 @@ const Navbar = () => {
   ];
   return (
     <HStack
+      as="nav"
       justifyContent="space-between"
       transform="translateY(-50%)"
       width={["90%", "80%", "70%", "60%", "50%"]}
