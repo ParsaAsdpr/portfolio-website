@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "../assets/style/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export const metadata: Metadata = {
   manifest: "/manifest.json",
   applicationName: "Parsa Asadpour Portfolio",
@@ -67,6 +69,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Analytics />
+        <SpeedInsights />
         <ChakraProvider>{children}</ChakraProvider>
       </body>
     </html>

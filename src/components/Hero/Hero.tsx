@@ -7,17 +7,27 @@ import TypeEffect from "./TypeEffect";
 import Button from "../common/Button";
 import { LuArrowDown } from "react-icons/lu";
 import DashedCircle from "../common/DashedCircle";
+import ScrollButton from "./ScrollButton";
+import localFont from "next/font/local";
+
+const dancing = localFont({
+  src: "../../assets/fonts/DancingScript.ttf",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  preload: true, // Ensures the font is prioritized during loading
+});
 
 const Hero = () => {
   return (
-    <Box position="relative" width="100vw" height="100vh" overflow="hidden">
+    <Box id="hero" position="relative" width="100vw" height="100vh" overflow="hidden">
       {[0, 1].map((i) => (
         <Motion
           key={i}
           initial={{ translateX: `${i === 0 ? "-" : ""}100%` }}
           animate={{ translateX: 0 }}
           transition={{ delay: 4.7, duration: 0.7, ease: "easeOut" }}
-          style={{ width: "100%", height: "50%", backgroundColor: '#f8e179' }}
+          style={{ width: "100%", height: "50%", backgroundColor: "#f8e179" }}
         ></Motion>
       ))}
       <Motion
@@ -56,13 +66,17 @@ const Hero = () => {
           zIndex={20}
           position="relative"
         >
-          <Text fontFamily="dancing" fontSize={[40, 50, 60, 75]} as="h1">
+          <Text
+            className={dancing.className}
+            fontSize={[40, 50, 60, 75]}
+            as="h1"
+          >
             {"Parsa Asadpour".split("").map((letter, index) => (
               <Motion
                 key={index}
                 initial={{ opacity: 0, left: "-50%" }}
                 animate={{ opacity: 1, left: 0 }}
-                transition={{ delay: 8 + (index * 0.1), duration: 0.5 }}
+                transition={{ delay: 8 + index * 0.1, duration: 0.5 }}
                 style={{ display: "inline", position: "relative" }}
               >
                 {letter}
@@ -85,6 +99,7 @@ const Hero = () => {
             </Button>
           </Motion>
         </VStack>
+        <ScrollButton />
       </HeroContainer>
     </Box>
   );
