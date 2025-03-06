@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This repository contains the source code for my personal portfolio website, built using [Next.js (App Router)](https://nextjs.org/) and [TailwindCSS](https://tailwindcss.com/). The website showcases my projects, skills, and provides a platform to contact me.
+This repository contains the source code for my personal portfolio website, built using [Next.js (App Router)](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/). The website showcases my projects, skills, and provides a platform to contact me.
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ This repository contains the source code for my personal portfolio website, buil
 ## Technologies Used
 
 - **Framework**: [Next.js](https://nextjs.org/) - A React framework for production.
-- **Styling**: [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- **Styling**: [Chakra UI](https://chakra-ui.com/) - A fully customizable component system.
 - **Language**: [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript at Any Scale.
 - **PWA**: Service Worker, Web Manifest, and caching strategies for offline support.
 - **Animations**: [Framer Motion](https://www.framer.com/motion/) - A library for smooth and interactive animations.

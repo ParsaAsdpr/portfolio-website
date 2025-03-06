@@ -1,6 +1,6 @@
 "use client";
-import { SimpleGrid, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import { SimpleGrid, Spinner, Text, VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { chakra } from "@chakra-ui/react";
 import FormInput from "./FormInput";
 import Button from "../common/Button";
@@ -15,6 +15,7 @@ type Schema = z.infer<typeof schema>;
 
 const ContactForm = () => {
   const toast = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const inputs = [
     {
       name: "name",
@@ -44,6 +45,8 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: Schema) => {
+    if (isLoading) return;
+    setIsLoading(true);
     const response = await fetch("/api/mail", {
       method: "POST",
       headers: {
@@ -57,6 +60,7 @@ const ContactForm = () => {
         description: "Your message has been sent successfully",
         status: "success",
       });
+      return setIsLoading(false);
     } else if (response.status < 500 && response.status >= 400) {
       const res = await response.json();
       toast({
@@ -64,12 +68,14 @@ const ContactForm = () => {
         description: res.error,
         status: "error",
       });
+      return setIsLoading(false);
     } else {
       toast({
         title: "Something went wrong",
         description: "There has been an unexpected error.",
         status: "error",
       });
+      return setIsLoading(false);
     }
   };
   return (
@@ -119,7 +125,7 @@ const ContactForm = () => {
               py={[3, 3, 4]}
               type="submit"
             >
-              Send Message
+              {isLoading ? <Spinner /> : "Send Message"}
             </Button>
           </Motion>
         </FormProvider>
