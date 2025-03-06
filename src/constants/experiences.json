@@ -14,5 +14,13 @@
     "color": "#9be2c1",
     "position": "Frontend Developer",
     "description": "Led the frontend team in designing and developing a responsive website using Figma, ensuring brand consistency and cross-browser compatibility. Integrated frontend components with Laravel, utilizing Tailwind CSS for rapid styling and clean code. Managed tasks via Jira, optimizing website performance through regular"
+  },
+  {
+    "organization": "Raysa",
+    "from": "February 2025",
+    "to": "now",
+    "color": "#f57878",
+    "position": "Frontend Developer",
+    "description": "As a Frontend Developer at Raysa, I contribute to building a comprehensive school and online class management web application using React. Our platform provides essential features for managing students, employees, scheduling, and virtual classrooms."
   }
 ]

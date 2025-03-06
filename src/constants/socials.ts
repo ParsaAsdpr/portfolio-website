@@ -12,7 +12,7 @@ const socials = [
     link: "https://github.com/ParsaAsdpr",
     label: "Github",
   },
-  { icon: FaSquarePhone, link: "tel:+989939604178", label: "Phone" },
+  { icon: FaSquarePhone, link: "tel:+989015971120", label: "Phone" },
 ];
 
 export default socials;

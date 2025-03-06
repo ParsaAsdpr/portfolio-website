@@ -15,7 +15,7 @@ const Footer = () => {
         gap={[5, 7, 10]}
       >
         <Text color="#eee" fontSize={[10, 12, 14]}>
-          © 2024 Parsa Asadpour. All Rights Reserved.
+          © 2025 Parsa Asadpour. All Rights Reserved.
         </Text>
 
         <HStack spacing={[5, 7, 10]}>
