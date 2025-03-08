@@ -1,3 +1,4 @@
+
 # Personal Portfolio Website
 
 This repository contains the source code for my personal portfolio website, built using [Next.js (App Router)](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/). The website showcases my projects, skills, and provides a platform to contact me.
@@ -75,6 +76,20 @@ Ensure you have the following installed on your machine:
    ```bash
    yarn install
    ```
+   
+4.  **Set up environment variables**:
+    
+    Create a `.env` file in the root of the project and add the following variables:
+    
+    ```
+    MAIL_URL=<your email platform SMTP hostname>
+    MAIL_PORT=<SMTP port>
+    MAIL_USERNAME=<your email provider username>
+    MAIL_PASSWORD=<your email provider password>
+    MAIL_ADDRESS=<your email provider email>
+    ```
+    
+    You need an email platform to get these variables. You can use any email service, but I recommend [Mailtrap](https://mailtrap.io/) as it is free and easy to use. For more details, check the [Mailtrap documentation](https://mailtrap.io/).
 
 ### Running the Development Server
 
