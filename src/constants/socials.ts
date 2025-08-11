@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedin, FaSquarePhone, FaTelegram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa6";
 
 const socials = [
   { icon: FaTelegram, link: "https://t.me/Parsa4P", label: "Telegram" },
   {
     icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/parsa-asadpour-42014322b",
+    link: "https://www.linkedin.com/in/parsa-asadpour",
     label: "LinkedIn",
   },
   {
@@ -12,7 +12,6 @@ const socials = [
     link: "https://github.com/ParsaAsdpr",
     label: "Github",
   },
-  { icon: FaSquarePhone, link: "tel:+989939604178", label: "Phone" },
 ];
 
 export default socials;
