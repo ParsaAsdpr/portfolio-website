@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   description:
-    "Parsa Asadpour | Junior Fullstack Developer and UI/UX Designer from Iran",
+    "Parsa Asadpour | Frontend Engineer and UI Developer from Iran",
   authors: { name: "Parsa Asadpour", url: "https://github.com/ParsaAsdpr" },
   robots: {
     index: true,

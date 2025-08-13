@@ -33,7 +33,7 @@ const TypeEffect = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "Junior Fullstack Developer and UI/UX Designer from Iran"
+                "Frontend Engineer and UI Developer from Iran"
               )
               .pauseFor(2500)
               .deleteAll()

@@ -21,7 +21,7 @@
     "to": "present",
     "color": "#f57878",
     "position": "Frontend Developer",
-    "description": "As a Frontend Developer at Raysa, I contribute to building a comprehensive school and online class management web application using React. Our platform provides essential features for managing students, employees, scheduling, and virtual classrooms."
+    "description": "Collaborating on Raysa, a school management web app using React, developing new features, refactoring into reusable components, and ensuring performance, accessibility, and seamless backend integration."
   },
   {
     "organization": "Techstrata",
@@ -29,6 +29,6 @@
     "to": "now",
     "color": "#7a78f5",
     "position": "Frontend Engineer",
-    "description": "Worked on a real-time voice assistant web app at TechStrata using React and Retell AI. Implemented voice wake-word detection with TensorFlow.js, dynamic audio playback, and state-driven UI with Zustand."
+    "description": "Built a responsive AI voice assistant app with React, Zustand, Retell AI, and Material UI, featuring real-time interaction, custom state management, and Framer Motion animations. Developed a REST-based chatbot widget with a live feel and contributed to scalable architecture and UI/UX design."
   }
 ]
