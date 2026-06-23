@@ -3,10 +3,24 @@ import React, { ReactNode } from "react";
 import Motion from "../common/Motion";
 import Navbar from "./Navbar";
 import Socials from "./Socials";
+import { SiteData } from "@/types";
 
-const HeroContainer = ({ children }: { children: ReactNode }) => {
+const HeroContainer = ({
+  children,
+  site_data,
+}: {
+  children: ReactNode;
+  site_data: SiteData;
+}) => {
   return (
-    <Box position="absolute" width="100%" height="100%" top="0%" right="0%" zIndex={10}>
+    <Box
+      position="absolute"
+      width="100%"
+      height="100%"
+      top="0%"
+      right="0%"
+      zIndex={10}
+    >
       <Box
         position="relative"
         width="85%"
@@ -37,7 +51,7 @@ const HeroContainer = ({ children }: { children: ReactNode }) => {
           </Motion>
         ))}
         <Navbar />
-        <Socials />
+        <Socials socials={site_data?.socials} />
         {children}
       </Box>
     </Box>
@@ -45,3 +59,4 @@ const HeroContainer = ({ children }: { children: ReactNode }) => {
 };
 
 export default HeroContainer;
+

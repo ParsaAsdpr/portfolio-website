@@ -2,9 +2,10 @@
 import { Flex, Icon, Link, Tooltip } from "@chakra-ui/react";
 import React from "react";
 import Motion from "../common/Motion";
-import socials from "../../constants/socials";
+import { Social } from "@/types";
+import { SOCIALS_MAP } from "@/utils/consts";
 
-const Socials = () => {
+const Socials = ({ socials }: { socials: Social[] }) => {
   return (
     <Flex
       position="absolute"
@@ -15,16 +16,21 @@ const Socials = () => {
       zIndex={30}
       gap={[4, 5, 6]}
     >
-      {socials.map(({ icon, link, label }, i) => (
+      {socials?.map((social, i) => (
         <Motion
-          key={link}
+          key={social.key}
           initial={{ opacity: 0, y: "-50%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 8.7 + i * 0.3 }}
         >
-          <Tooltip label={label} hasArrow bg="#333" placement="left">
+          <Tooltip
+            label={SOCIALS_MAP[social.key].label}
+            hasArrow
+            bg="#333"
+            placement="left"
+          >
             <Link
-              href={link}
+              href={social.link}
               target="_blank"
               bg={"#f8e179"}
               fontSize={[24, 26, 28, 30, 33]}
@@ -36,7 +42,7 @@ const Socials = () => {
                 transform: "scale(1.1)",
               }}
             >
-              <Icon as={icon} />
+              <Icon as={SOCIALS_MAP[social.key].icon} />
             </Link>
           </Tooltip>
         </Motion>
@@ -46,3 +52,4 @@ const Socials = () => {
 };
 
 export default Socials;
+
