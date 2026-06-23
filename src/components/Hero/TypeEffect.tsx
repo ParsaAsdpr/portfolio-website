@@ -1,9 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Typewriter from "typewriter-effect";
 
-const TypeEffect = () => {
+const TypeEffect = ({ text }: { text: string }) => {
   const [isTyping, setIsTyping] = useState(false);
+  const texts = useMemo(() => text.split("|"), [text]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,15 +32,15 @@ const TypeEffect = () => {
             delay: 95,
           }}
           onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                "Frontend Engineer and UI Developer from Iran"
-              )
-              .pauseFor(2500)
-              .deleteAll()
-              .typeString("Open to collaboration and exciting projects.")
-              .pauseFor(2000)
-              .start();
+            texts.forEach((text, index) => {
+              typewriter.typeString(text).pauseFor(2000);
+
+              if (index < texts.length - 1) {
+                typewriter.deleteAll();
+              }
+            });
+
+            typewriter.start();
           }}
         />
       )}{" "}
@@ -48,3 +49,4 @@ const TypeEffect = () => {
 };
 
 export default TypeEffect;
+

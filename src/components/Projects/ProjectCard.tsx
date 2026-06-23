@@ -1,4 +1,5 @@
 "use client";
+import { Project } from "@/types";
 import {
   Box,
   HStack,
@@ -9,7 +10,8 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import { IconType } from "react-icons";
+import { IoIosLink } from "react-icons/io";
+import { SlSocialGithub } from "react-icons/sl";
 
 const ProjectCard = ({
   view,
@@ -20,13 +22,7 @@ const ProjectCard = ({
   view: boolean;
   delay: number;
   size: number;
-  project: {
-    name: string;
-    description: string;
-    image: string;
-    links: { name: string; icon: IconType; url: string }[];
-    isDark: boolean;
-  };
+  project: Project;
 }) => {
   return (
     <VStack
@@ -64,30 +60,36 @@ const ProjectCard = ({
           justifyContent="center"
           gap={10}
         >
-          {project.links.map((link) => (
-            <ChakraLink
-              key={link.name}
-              as={Link}
-              href={link.url}
-              target="_blank"
-              rounded="full"
-              boxSize={["45px", "50px", "55px","60px"]}
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              visibility="hidden"
-              opacity={0}
-              transition="opacity 0.3s 0.2s, color 0.3s, background 0.3s"
-              color={project.isDark ? "#fff" : "#111"}
-              border={`2px solid ${project.isDark ? "#fff" : "#111"}`}
-              _hover={{
-                backgroundColor: project.isDark ? "#fff" : "#111",
-                color: project.isDark ? "#111" : "#fff",
-              }}
-            >
-              <Icon fontSize={[20, 23, 26, 30]} as={link.icon} />
-            </ChakraLink>
-          ))}
+          {["github_link", "link"].map(
+            (link: string) =>
+              project[link as keyof Project] && (
+                <ChakraLink
+                  key={link}
+                  as={Link}
+                  href={project[link as keyof Project] as string}
+                  target="_blank"
+                  rounded="full"
+                  boxSize={["45px", "50px", "55px", "60px"]}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  visibility="hidden"
+                  opacity={0}
+                  transition="opacity 0.3s 0.2s, color 0.3s, background 0.3s"
+                  color={project.is_dark ? "#fff" : "#111"}
+                  border={`2px solid ${project.is_dark ? "#fff" : "#111"}`}
+                  _hover={{
+                    backgroundColor: project.is_dark ? "#fff" : "#111",
+                    color: project.is_dark ? "#111" : "#fff",
+                  }}
+                >
+                  <Icon
+                    fontSize={[20, 23, 26, 30]}
+                    as={link === "github_link" ? SlSocialGithub : IoIosLink}
+                  />
+                </ChakraLink>
+              ),
+          )}
         </HStack>
         <Box
           className="project-image"
@@ -105,7 +107,7 @@ const ProjectCard = ({
             as="span"
             flexShrink={1}
             fontWeight={700}
-            fontSize={[ 17, 19, 21]}
+            fontSize={[17, 19, 21]}
             position="relative"
             display="inline-block"
             bg="white"
@@ -115,10 +117,13 @@ const ProjectCard = ({
             {project.name}
           </Text>
         </HStack>
-        <Text fontSize={[14, 16, 18]}>{project.description} (Hover on Image)</Text>
+        <Text fontSize={[14, 16, 18]}>
+          {project.description} (Hover on Image)
+        </Text>
       </VStack>
     </VStack>
   );
 };
 
 export default ProjectCard;
+

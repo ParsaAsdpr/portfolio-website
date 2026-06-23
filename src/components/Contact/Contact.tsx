@@ -5,9 +5,9 @@ import Title from "../common/Title";
 import ContactForm from "./ContactForm";
 import useToast from "@/hooks/useToast";
 import Motion from "../common/Motion";
-import contactInfo from "../../constants/contact.json";
+import { Contact, SiteData } from "@/types";
 
-const Contact = () => {
+const Contact = ({ site_data }: { site_data: SiteData }) => {
   const toast = useToast();
 
   return (
@@ -39,7 +39,7 @@ const Contact = () => {
                 Get In Touch
               </Text>
             </Motion>
-            {contactInfo.map((info) => (
+            {site_data.contacts?.map((info: Contact) => (
               <VStack key={info.title} alignItems="start">
                 <Motion
                   initial={{ opacity: 0, y: "50%" }}
@@ -71,7 +71,7 @@ const Contact = () => {
                           toast({
                             title: "Text copied successfully.",
                             status: "success",
-                          })
+                          }),
                         )
                       }
                     >
@@ -89,3 +89,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

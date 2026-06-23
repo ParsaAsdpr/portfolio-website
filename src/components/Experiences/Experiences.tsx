@@ -1,10 +1,10 @@
 "use client";
 import { Text, VStack } from "@chakra-ui/react";
-import experiences from "../../constants/experiences.json";
 import Motion from "../common/Motion";
 import ExperienceCard from "./ExperienceCard";
+import { Experience, SiteData } from "@/types";
 
-const Experiences = () => {
+const Experiences = ({ site_data }: { site_data: SiteData }) => {
   return (
     <VStack
       py={["3rem", "4rem", "5rem"]}
@@ -26,11 +26,8 @@ const Experiences = () => {
       </Motion>
 
       <VStack spacing={0}>
-        {experiences.map((experience) => (
-          <ExperienceCard
-            key={experience.organization}
-            experience={experience}
-          />
+        {site_data.experiences?.map((experience: Experience) => (
+          <ExperienceCard key={experience.id} experience={experience} />
         ))}
       </VStack>
     </VStack>
@@ -38,3 +35,4 @@ const Experiences = () => {
 };
 
 export default Experiences;
+

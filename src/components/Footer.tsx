@@ -1,7 +1,11 @@
-import { Box, Flex, HStack, Link, Text, Tooltip } from "@chakra-ui/react";
+"use client";
+
+import { Box, Flex, HStack, Icon, Link, Text, Tooltip } from "@chakra-ui/react";
 import React from "react";
-import socials from "../constants/socials";
-const Footer = () => {
+import { SiteData } from "@/types";
+import { SOCIALS_MAP } from "@/utils/consts";
+
+const Footer = ({ site_data }: { site_data: SiteData }) => {
   return (
     <Box as="footer" bg="#262626" py={[8, 10, 12, 14]} mt={{ base: 20, lg: 0 }}>
       <Flex
@@ -15,14 +19,14 @@ const Footer = () => {
         gap={[5, 7, 10]}
       >
         <Text color="#eee" fontSize={[10, 12, 14]}>
-          © 2025 Parsa Asadpour. All Rights Reserved.
+          © {new Date().getFullYear()} {site_data?.title}. All Rights Reserved.
         </Text>
 
         <HStack spacing={[5, 7, 10]}>
-          {socials.map((social) => (
+          {site_data.socials.map((social) => (
             <Tooltip
-              key={social.label}
-              label={social.label}
+              key={social.key}
+              label={SOCIALS_MAP[social.key].label}
               hasArrow
               bg="#333"
               placement="top"
@@ -40,7 +44,7 @@ const Footer = () => {
                   transform: "scale(1.1)",
                 }}
               >
-                <social.icon />
+                <Icon as={SOCIALS_MAP[social.key].icon} />
               </Link>
             </Tooltip>
           ))}
@@ -51,3 +55,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

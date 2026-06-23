@@ -9,6 +9,7 @@ import { LuArrowDown } from "react-icons/lu";
 import DashedCircle from "../common/DashedCircle";
 import ScrollButton from "./ScrollButton";
 import localFont from "next/font/local";
+import { SiteData } from "@/types";
 
 const dancing = localFont({
   src: "../../assets/fonts/DancingScript.ttf",
@@ -18,9 +19,15 @@ const dancing = localFont({
   preload: true, // Ensures the font is prioritized during loading
 });
 
-const Hero = () => {
+const Hero = ({ site_data }: { site_data: SiteData }) => {
   return (
-    <Box id="hero" position="relative" width="100vw" height="100vh" overflow="hidden">
+    <Box
+      id="hero"
+      position="relative"
+      width="100vw"
+      height="100vh"
+      overflow="hidden"
+    >
       {[0, 1].map((i) => (
         <Motion
           key={i}
@@ -57,7 +64,7 @@ const Hero = () => {
       <DashedCircle size={1300} position={[-60, 70]} />
       <DashedCircle size={1000} position={[40, -20]} />
 
-      <HeroContainer>
+      <HeroContainer site_data={site_data}>
         <VStack
           paddingLeft={["5%", "10%", "20%"]}
           justifyContent="center"
@@ -71,7 +78,7 @@ const Hero = () => {
             fontSize={[40, 50, 60, 75]}
             as="h1"
           >
-            {"Parsa Asadpour".split("").map((letter, index) => (
+            {site_data.hero_title?.split("").map((letter, index) => (
               <Motion
                 key={index}
                 initial={{ opacity: 0, left: "-50%" }}
@@ -83,7 +90,7 @@ const Hero = () => {
               </Motion>
             ))}
           </Text>
-          <TypeEffect />
+          <TypeEffect text={site_data.type_effect_text} />
 
           <Motion
             initial={{ opacity: 0, y: "50%" }}
@@ -91,7 +98,7 @@ const Hero = () => {
             transition={{ delay: 9.2, duration: 0.6, ease: "easeOut" }}
             style={{ display: "flex" }}
           >
-            <Button isLink href="/My CV.pdf" download isExternal>
+            <Button isLink href={site_data.cv_url || "#"} download isExternal>
               <HStack fontSize={[15, 17, 20]}>
                 <Text>Download CV</Text>
                 <Icon as={LuArrowDown} transform="translateX(50%)" />
@@ -106,3 +113,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

@@ -3,12 +3,12 @@ import { Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import Title from "./common/Title";
 import Motion from "./common/Motion";
-import data from "../constants/about.json";
+import { Journey, SiteData } from "@/types";
 
-const About = () => {
+const About = ({ site_data }: { site_data: SiteData }) => {
   return (
     <VStack
-      py={["3rem","4rem","5rem"]}
+      py={["3rem", "4rem", "5rem"]}
       justifyContent="center"
       id="about"
       sx={{
@@ -31,9 +31,9 @@ const About = () => {
           fontSize={[17, 18, 19, 20, 21]}
           py={["1.25rem", "2rem", "3rem"]}
           px={[4, 7, 0]}
-          as='main'
+          as="main"
         >
-          {data.about}
+          {site_data.about}
         </Text>
       </Motion>
       <Motion
@@ -55,13 +55,13 @@ const About = () => {
           py={10}
           px={[5, 7, 0]}
         >
-          {data.Journies.map((journey, i) => (
+          {site_data.journeys?.map((journey: Journey, i: number) => (
             <GridItem key={journey.title} area={`item${i + 1}`}>
               <VStack alignItems="start">
                 <Text fontSize={[16, 17, 18, 19]} fontWeight={800} color="#333">
                   {journey.title}
                 </Text>
-                <Text fontSize={[16, 17, 18, 19]}>{journey.desc}</Text>
+                <Text fontSize={[16, 17, 18, 19]}>{journey.description}</Text>
               </VStack>
             </GridItem>
           ))}
@@ -72,3 +72,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -2,12 +2,12 @@
 import { HStack, useBreakpointValue, VStack } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import Title from "../common/Title";
-import projects from "../../constants/projects";
 import ProjectCard from "./ProjectCard";
 import SliderButtons from "./SliderButtons";
 import { useInView } from "framer-motion";
+import { SiteData } from "@/types";
 
-const Projects = () => {
+const Projects = ({ site_data }: { site_data: SiteData }) => {
   const [offset, setOffset] = React.useState(0);
   const sliderRef = useRef(null);
   const view = useInView(sliderRef, { once: true });
@@ -35,14 +35,14 @@ const Projects = () => {
         <HStack
           mt={14}
           spacing="10px"
-          width={((cardSize || 430) + 10) * projects.length}
+          width={((cardSize || 430) + 10) * site_data?.projects.length}
           justifyContent="start"
           alignItems="start"
           transition="transform 0.5s ease-in-out"
           transform={`translateX(${(-(cardSize || 430) - 10) * offset}px)`}
           ref={sliderRef}
         >
-          {projects.map((project, i) => (
+          {site_data?.projects.map((project, i) => (
             <ProjectCard
               size={cardSize || 430}
               key={project.name}
@@ -57,7 +57,7 @@ const Projects = () => {
           itemsPerView={itemsPerView}
           offset={offset}
           setOffset={setOffset}
-          projectLength={projects.length}
+          projectLength={site_data?.projects.length}
         />
       </VStack>
     </VStack>
@@ -65,3 +65,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

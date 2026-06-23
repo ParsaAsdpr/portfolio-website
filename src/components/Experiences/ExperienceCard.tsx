@@ -2,19 +2,9 @@ import React from "react";
 import { chakra, HStack } from "@chakra-ui/react";
 import { Text, VStack } from "@chakra-ui/react";
 import Motion from "../common/Motion";
+import { Experience } from "@/types";
 
-const ExperienceCard = ({
-  experience,
-}: {
-  experience: {
-    organization: string;
-    from: string;
-    to: string;
-    color: string;
-    position: string;
-    description: string;
-  };
-}) => {
+const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
     <HStack
       alignItems="start"
@@ -37,11 +27,7 @@ const ExperienceCard = ({
           whileInView={{ opacity: 1, y: 0, lineHeight: 1.5 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <Text
-            fontSize={[15, 16, 18, 20, 22]}
-            fontWeight={700}
-            color="#333"
-          >
+          <Text fontSize={[15, 16, 18, 20, 22]} fontWeight={700} color="#333">
             {experience.organization}
           </Text>
         </Motion>
@@ -51,7 +37,7 @@ const ExperienceCard = ({
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           <Text fontSize={[10, 12, 13, 15, 17]} fontStyle="italic" color="#888">
-            {experience.from} - {experience.to}
+            {experience.from_date} - {experience.to_date}
           </Text>
         </Motion>
       </VStack>
@@ -127,3 +113,4 @@ const ExperienceCard = ({
 };
 
 export default ExperienceCard;
+
