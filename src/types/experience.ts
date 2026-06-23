@@ -2,8 +2,8 @@ export type Experience = {
   id: number;
   site_data_id: number;
   organization: string;
-  from_date: string;
-  to_date: string;
+  from: Date;
+  to: Date;
   color: string;
   position: string;
   description: string;
@@ -11,3 +11,4 @@ export type Experience = {
   created_at: string;
   updated_at: string;
 };
+

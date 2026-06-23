@@ -3,6 +3,7 @@ import { chakra, HStack } from "@chakra-ui/react";
 import { Text, VStack } from "@chakra-ui/react";
 import Motion from "../common/Motion";
 import { Experience } from "@/types";
+import dayjs from "dayjs";
 
 const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
@@ -37,7 +38,10 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           <Text fontSize={[10, 12, 13, 15, 17]} fontStyle="italic" color="#888">
-            {experience.from_date} - {experience.to_date}
+            {dayjs(experience.from).format("MMMM YYYY")} -{" "}
+            {experience.to
+              ? dayjs(experience.to).format("MMMM YYYY")
+              : "Present"}
           </Text>
         </Motion>
       </VStack>
