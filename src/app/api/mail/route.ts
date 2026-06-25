@@ -34,7 +34,7 @@ export const POST = async (req: NextRequest) => {
   if (lastSent && now - Number(lastSent) < COOLDOWN_DURATION) {
     return res.json(
       { error: "Please wait before sending another email." },
-      { status: 429 }
+      { status: 429 },
     );
   }
 
@@ -45,7 +45,7 @@ export const POST = async (req: NextRequest) => {
   const mail = await transporter.sendMail({
     from: `Parsa Asadpour <${process.env.MAIL_ADDRESS}>`,
     to: "parsaasadpour.1999@gmail.com",
-    subject: `${data.name} (${data.email}) Says ${data.subject}`,
+    subject: `New Mail from ${data.name} (${data.email})`,
     text: buildContactEmailText(data),
     html: buildContactEmailHtml(data),
   });
@@ -56,3 +56,4 @@ export const POST = async (req: NextRequest) => {
 
   return res.json({ messageId: mail.messageId }, { status: 200 });
 };
+
