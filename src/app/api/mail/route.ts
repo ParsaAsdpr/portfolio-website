@@ -1,3 +1,7 @@
+import {
+  buildContactEmailHtml,
+  buildContactEmailText,
+} from "@/utils/emailTemplate";
 import schema from "@/validation/schema";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse as res } from "next/server";
@@ -36,11 +40,14 @@ export const POST = async (req: NextRequest) => {
 
   const transporter = nodemailer.createTransport(smtpConfig);
 
+  const { data } = validatedBody;
+
   const mail = await transporter.sendMail({
     from: `Parsa Asadpour <${process.env.MAIL_ADDRESS}>`,
     to: "parsaasadpour.1999@gmail.com",
-    subject: `${validatedBody.data.name}(${validatedBody.data.email}) Says ${validatedBody.data.subject}`,
-    text: validatedBody.data.message,
+    subject: `${data.name} (${data.email}) Says ${data.subject}`,
+    text: buildContactEmailText(data),
+    html: buildContactEmailHtml(data),
   });
 
   cookieStore.set("lastSentEmail", now.toString(), {
