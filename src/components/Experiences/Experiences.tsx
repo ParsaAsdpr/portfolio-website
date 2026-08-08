@@ -4,7 +4,7 @@ import Motion from "../common/Motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience, SiteData } from "@/types";
 
-const Experiences = ({ site_data }: { site_data: SiteData }) => {
+const Experiences = ({ site_data }: { site_data: SiteData | null }) => {
   return (
     <VStack
       py={["3rem", "4rem", "5rem"]}
@@ -26,7 +26,7 @@ const Experiences = ({ site_data }: { site_data: SiteData }) => {
       </Motion>
 
       <VStack spacing={0}>
-        {site_data.experiences?.map((experience: Experience) => (
+        {site_data?.experiences?.map((experience: Experience) => (
           <ExperienceCard key={experience.id} experience={experience} />
         ))}
       </VStack>

@@ -7,7 +7,7 @@ import SliderButtons from "./SliderButtons";
 import { useInView } from "framer-motion";
 import { SiteData } from "@/types";
 
-const Projects = ({ site_data }: { site_data: SiteData }) => {
+const Projects = ({ site_data }: { site_data: SiteData | null }) => {
   const [offset, setOffset] = React.useState(0);
   const sliderRef = useRef(null);
   const view = useInView(sliderRef, { once: true });
@@ -35,7 +35,7 @@ const Projects = ({ site_data }: { site_data: SiteData }) => {
         <HStack
           mt={14}
           spacing="10px"
-          width={((cardSize || 430) + 10) * site_data?.projects.length}
+          width={((cardSize || 430) + 10) * (site_data?.projects.length ?? 0)}
           justifyContent="start"
           alignItems="start"
           transition="transform 0.5s ease-in-out"
@@ -59,7 +59,7 @@ const Projects = ({ site_data }: { site_data: SiteData }) => {
           itemsPerView={itemsPerView}
           offset={offset}
           setOffset={setOffset}
-          projectLength={site_data?.projects.length}
+          projectLength={site_data?.projects.length ?? 0}
         />
       </VStack>
     </VStack>

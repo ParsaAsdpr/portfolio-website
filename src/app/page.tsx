@@ -49,8 +49,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export async function generateViewport(): Promise<Viewport> {
   const site = await getSiteData();
 
-  console.log(site?.projects);
-
   return {
     ...fallbackViewport,
     themeColor: site?.theme_color ?? fallbackViewport.themeColor,
@@ -63,12 +61,12 @@ export default async function Home() {
   return (
     <>
       <Intro />
-      <Hero site_data={site_data!} />
-      <About site_data={site_data!} />
-      <Experiences site_data={site_data!} />
-      <Projects site_data={site_data!} />
-      <Contact site_data={site_data!} />
-      <Footer site_data={site_data!} />
+      <Hero site_data={site_data} />
+      <About site_data={site_data} />
+      <Experiences site_data={site_data} />
+      <Projects site_data={site_data} />
+      <Contact site_data={site_data} />
+      <Footer site_data={site_data} />
       <GoToTopButton />
     </>
   );

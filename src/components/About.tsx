@@ -5,7 +5,7 @@ import Title from "./common/Title";
 import Motion from "./common/Motion";
 import { Journey, SiteData } from "@/types";
 
-const About = ({ site_data }: { site_data: SiteData }) => {
+const About = ({ site_data }: { site_data: SiteData | null }) => {
   return (
     <VStack
       py={["3rem", "4rem", "5rem"]}
@@ -33,7 +33,7 @@ const About = ({ site_data }: { site_data: SiteData }) => {
           px={[4, 7, 0]}
           as="main"
         >
-          {site_data.about}
+          {site_data?.about}
         </Text>
       </Motion>
       <Motion
@@ -55,7 +55,7 @@ const About = ({ site_data }: { site_data: SiteData }) => {
           py={10}
           px={[5, 7, 0]}
         >
-          {site_data.journeys?.map((journey: Journey, i: number) => (
+          {site_data?.journeys?.map((journey: Journey, i: number) => (
             <GridItem key={journey.title} area={`item${i + 1}`}>
               <VStack alignItems="start">
                 <Text fontSize={[16, 17, 18, 19]} fontWeight={800} color="#333">

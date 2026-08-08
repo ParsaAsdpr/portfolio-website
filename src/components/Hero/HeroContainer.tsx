@@ -10,7 +10,7 @@ const HeroContainer = ({
   site_data,
 }: {
   children: ReactNode;
-  site_data: SiteData;
+  site_data: SiteData | null;
 }) => {
   return (
     <Box
@@ -51,7 +51,7 @@ const HeroContainer = ({
           </Motion>
         ))}
         <Navbar />
-        <Socials socials={site_data?.socials} />
+        <Socials socials={site_data?.socials ?? []} />
         {children}
       </Box>
     </Box>

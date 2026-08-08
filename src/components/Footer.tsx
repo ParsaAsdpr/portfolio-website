@@ -5,7 +5,7 @@ import React from "react";
 import { SiteData } from "@/types";
 import { SOCIALS_MAP } from "@/utils/consts";
 
-const Footer = ({ site_data }: { site_data: SiteData }) => {
+const Footer = ({ site_data }: { site_data: SiteData | null }) => {
   return (
     <Box as="footer" bg="#262626" py={[8, 10, 12, 14]} mt={{ base: 20, lg: 0 }}>
       <Flex
@@ -23,7 +23,7 @@ const Footer = ({ site_data }: { site_data: SiteData }) => {
         </Text>
 
         <HStack spacing={[5, 7, 10]}>
-          {site_data.socials.map((social) => (
+          {site_data?.socials.map((social) => (
             <Tooltip
               key={social.key}
               label={SOCIALS_MAP[social.key].label}

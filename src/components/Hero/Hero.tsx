@@ -19,7 +19,7 @@ const dancing = localFont({
   preload: true, // Ensures the font is prioritized during loading
 });
 
-const Hero = ({ site_data }: { site_data: SiteData }) => {
+const Hero = ({ site_data }: { site_data: SiteData | null }) => {
   return (
     <Box
       id="hero"
@@ -78,7 +78,7 @@ const Hero = ({ site_data }: { site_data: SiteData }) => {
             fontSize={[40, 50, 60, 75]}
             as="h1"
           >
-            {site_data.hero_title?.split("").map((letter, index) => (
+            {site_data?.hero_title?.split("").map((letter, index) => (
               <Motion
                 key={index}
                 initial={{ opacity: 0, left: "-50%" }}
@@ -90,7 +90,7 @@ const Hero = ({ site_data }: { site_data: SiteData }) => {
               </Motion>
             ))}
           </Text>
-          <TypeEffect text={site_data.type_effect_text} />
+          <TypeEffect text={site_data?.type_effect_text ?? ""} />
 
           <Motion
             initial={{ opacity: 0, y: "50%" }}
@@ -98,7 +98,7 @@ const Hero = ({ site_data }: { site_data: SiteData }) => {
             transition={{ delay: 9.2, duration: 0.6, ease: "easeOut" }}
             style={{ display: "flex" }}
           >
-            <Button isLink href={site_data.cv_url || "#"} download isExternal>
+            <Button isLink href={site_data?.cv_url || "#"} download isExternal>
               <HStack fontSize={[15, 17, 20]}>
                 <Text>Download CV</Text>
                 <Icon as={LuArrowDown} transform="translateX(50%)" />

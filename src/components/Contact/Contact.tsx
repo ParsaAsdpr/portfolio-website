@@ -7,7 +7,7 @@ import useToast from "@/hooks/useToast";
 import Motion from "../common/Motion";
 import { Contact as ContactType, SiteData } from "@/types";
 
-const Contact = ({ site_data }: { site_data: SiteData }) => {
+const Contact = ({ site_data }: { site_data: SiteData | null }) => {
   const toast = useToast();
 
   return (
@@ -39,7 +39,7 @@ const Contact = ({ site_data }: { site_data: SiteData }) => {
                 Get In Touch
               </Text>
             </Motion>
-            {site_data.contacts?.map((info: ContactType) => (
+            {site_data?.contacts?.map((info: ContactType) => (
               <VStack key={info.title} alignItems="start">
                 <Motion
                   initial={{ opacity: 0, y: "50%" }}
