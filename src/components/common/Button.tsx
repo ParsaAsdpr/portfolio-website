@@ -5,9 +5,10 @@ import React, { ReactNode } from "react";
 interface Props extends LinkProps {
   children: ReactNode;
   isLink?: boolean;
+  disabled?: boolean;
 }
 
-const Button = ({ children, isLink = false, ...props }: Props) => {
+const Button = ({ children, isLink = false, disabled, ...props }: Props) => {
   return (
     <ChakraLink
       as={isLink ? Link : "button"}
@@ -20,6 +21,8 @@ const Button = ({ children, isLink = false, ...props }: Props) => {
       position="relative"
       overflow="hidden"
       transition={"all 0.3s"}
+      aria-disabled={disabled || undefined}
+      {...(disabled && !isLink ? { disabled: true } : {})}
       sx={{
         ":before": {
           content: `''`,
@@ -43,6 +46,15 @@ const Button = ({ children, isLink = false, ...props }: Props) => {
         ":hover": {
           color: "#fff",
         },
+        ...(disabled
+          ? {
+              opacity: 0.35,
+              cursor: "not-allowed",
+              pointerEvents: "none",
+              ":hover": { color: "#333" },
+              ":hover:before": { right: "100%" },
+            }
+          : {}),
       }}
       {...props}
     >
@@ -52,3 +64,4 @@ const Button = ({ children, isLink = false, ...props }: Props) => {
 };
 
 export default Button;
+

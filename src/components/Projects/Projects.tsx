@@ -42,15 +42,17 @@ const Projects = ({ site_data }: { site_data: SiteData }) => {
           transform={`translateX(${(-(cardSize || 430) - 10) * offset}px)`}
           ref={sliderRef}
         >
-          {site_data?.projects.map((project, i) => (
-            <ProjectCard
-              size={cardSize || 430}
-              key={project.name}
-              delay={i * 0.2}
-              view={view}
-              project={project}
-            />
-          ))}
+          {[...(site_data?.projects ?? [])]
+            .sort((a, b) => a.sort_order - b.sort_order)
+            .map((project, i) => (
+              <ProjectCard
+                size={cardSize || 430}
+                key={project.name}
+                delay={i * 0.2}
+                view={view}
+                project={project}
+              />
+            ))}
         </HStack>
 
         <SliderButtons

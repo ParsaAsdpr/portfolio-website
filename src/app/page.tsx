@@ -49,6 +49,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export async function generateViewport(): Promise<Viewport> {
   const site = await getSiteData();
 
+  console.log(site?.projects);
+
   return {
     ...fallbackViewport,
     themeColor: site?.theme_color ?? fallbackViewport.themeColor,
