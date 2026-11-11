@@ -26,9 +26,11 @@ const Experiences = ({ site_data }: { site_data: SiteData | null }) => {
       </Motion>
 
       <VStack spacing={0}>
-        {site_data?.experiences?.map((experience: Experience) => (
-          <ExperienceCard key={experience.id} experience={experience} />
-        ))}
+        {[...(site_data?.experiences ?? [])]
+          .sort((a, b) => a.sort_order - b.sort_order)
+          .map((experience: Experience) => (
+            <ExperienceCard key={experience.id} experience={experience} />
+          ))}
       </VStack>
     </VStack>
   );
